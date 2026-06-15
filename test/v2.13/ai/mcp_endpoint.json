@@ -1,0 +1,18 @@
+{
+  "description": "AI MCP test",
+  "target": "https://velonetics.io/schema/v2.13/ai/mcp_endpoint.json",
+  "tests": [
+    {
+      "description": "Typical MCP server attachment",
+      "data": {
+        "server_name": "stories-tracker"
+      },
+      "valid": true
+    },
+    {
+      "description": "Empty declaration",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

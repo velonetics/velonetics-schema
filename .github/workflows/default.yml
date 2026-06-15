@@ -1,0 +1,9 @@
+on:
+  schedule:
+    - cron: '30 20 * * *'
+name: Issue and PR hygiene
+jobs:
+  stale:
+    uses: velonetics/.github/.github/workflows/stale.yml@main
+  lock-threads:
+    uses: velonetics/.github/.github/workflows/lock-threads.yml@main
