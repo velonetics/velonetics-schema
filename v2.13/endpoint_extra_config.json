@@ -267,7 +267,7 @@
       "type": "object"
     },
     "websocket": {
-      "description": "Enterprise only. Enables [websocket communication](https://velonetics.io/docs/enterprise/websockets/)",
+      "description": "Enables [WebSocket communication (RFC-6455)](https://github.com/velonetics/velonetics-ce/blob/main/docs/websockets.md)",
       "$ref": "websocket.json",
       "type": "object"
     }
