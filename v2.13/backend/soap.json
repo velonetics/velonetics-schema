@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://velonetics.io/schema/v2.13/backend/soap.json",
   "title": "SOAP Template modifier",
-  "description": "Enterprise only. Build and modify requests to communicate with SOAP services.\n\nSee: https://velonetics.io/docs/backends/soap/",
+  "description": "Build and modify requests to communicate with SOAP services. Available in Velonetics CE.\n\nSee: https://velonetics.io/docs/backends/soap/",
   "type": "object",
   "oneOf": [
     {
@@ -10,32 +10,129 @@
     },
     {
       "required": [ "template" ]
+    },
+    {
+      "required": [ "wsdl" ],
+      "properties": {
+        "wsdl": {
+          "required": [ "generate_template" ],
+          "properties": {
+            "generate_template": {
+              "const": true
+            }
+          }
+        }
+      }
     }
   ],
   "properties": {
     "content_type": {
       "title": "Content-Type",
-      "description": "The `Content-Type` used in your template, and that will be sent to the SOAP server. This is not the content-type the end-user sent in the request.\n\nSee: https://velonetics.io/docs/backends/soap/",
+      "description": "The Content-Type sent to the SOAP server.",
       "examples": [ "application/xml", "text/xml" ],
       "default": "text/xml",
       "type": "string"
     },
     "debug": {
       "title": "Enable debug",
-      "description": "When `true`, shows useful information in the logs with `DEBUG` level about the input received and the body generated. Do not enable in production. Debug logs are multiline and designed fore developer readibility, not machine processing.\n\nSee: https://velonetics.io/docs/backends/soap/",
       "default": false,
       "type": "boolean"
     },
     "path": {
       "title": "Path to template",
-      "description": "The path to the Go template file you want to use to craft the body.\n\nSee: https://velonetics.io/docs/backends/soap/",
       "examples": [ "./path/to.xml" ],
       "type": "string"
     },
     "template": {
       "title": "Template",
-      "description": "An inline base64 encoded Go template with the body XML content you want to send to the SOAP service. This option is useful if you don't want to rely on external files and embed the template in the configuration.\n\nSee: https://velonetics.io/docs/backends/soap/",
+      "description": "Inline base64-encoded Go template XML body.",
       "type": "string"
+    },
+    "soap_action": {
+      "title": "SOAPAction",
+      "description": "SOAPAction HTTP header value sent to the SOAP server (SOAP 1.1).",
+      "type": "string"
+    },
+    "watch_template": {
+      "title": "Watch template file",
+      "description": "When true and path is set, reload the template when the file changes.",
+      "default": false,
+      "type": "boolean"
+    },
+    "reload_interval": {
+      "title": "Reload interval",
+      "description": "Polling interval to reload path-based templates (e.g. 5s).",
+      "examples": [ "5s", "30s" ],
+      "type": "string"
+    },
+    "wsdl": {
+      "title": "WSDL",
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        },
+        "port": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string"
+        },
+        "generate_template": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ws_security": {
+      "title": "WS-Security",
+      "type": "object",
+      "properties": {
+        "username_token": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "saml_assertion": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "x509": {
+          "type": "object",
+          "properties": {
+            "cert_path": {
+              "type": "string"
+            },
+            "key_path": {
+              "type": "string"
+            },
+            "key_password": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "patternProperties": {
