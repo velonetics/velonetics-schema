@@ -1,0 +1,13 @@
+{
+  "description": "Pub/Sub subscriber backend schema test",
+  "target": "https://velonetics.io/schema/v2.13/backend/pubsub/subscriber.json",
+  "tests": [
+    {
+      "description": "Kafka subscriber subscription_url",
+      "data": {
+        "subscription_url": "group?topic=mytopic"
+      },
+      "valid": true
+    }
+  ]
+}

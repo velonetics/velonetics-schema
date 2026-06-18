@@ -1,0 +1,13 @@
+{
+  "description": "Pub/Sub publisher backend schema test",
+  "target": "https://velonetics.io/schema/v2.13/backend/pubsub/publisher.json",
+  "tests": [
+    {
+      "description": "Kafka publisher topic_url",
+      "data": {
+        "topic_url": "mytopic"
+      },
+      "valid": true
+    }
+  ]
+}
