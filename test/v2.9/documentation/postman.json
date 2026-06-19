@@ -1,6 +1,6 @@
 {
   "description": "Postman test",
-  "target": "https://velonetics.io/schema/v2.9/documentation/postman.json",
+  "target": "https://pucora.io/schema/v2.9/documentation/postman.json",
   "tests": [
     {
       "description": "Valid Postman collection at the service level",

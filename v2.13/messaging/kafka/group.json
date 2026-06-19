@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/messaging/kafka/group.json",
+  "$id": "https://pucora.io/schema/v2.13/messaging/kafka/group.json",
   "title": "Kafka Consumer Details",
   "description": "Enterprise only. Defines the detaisl for a Kafka consumer group.",
   "type": "object",

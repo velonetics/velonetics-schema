@@ -1,6 +1,6 @@
 {
   "description": "Full JSON Schema test",
-  "target": "https://velonetics.io/schema/v2.13/velonetics.json",
+  "target": "https://pucora.io/schema/v2.13/pucora.json",
   "tests": [
     {
       "description": "Workflow test case",

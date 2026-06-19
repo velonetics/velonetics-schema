@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/flexible_config.json",
+  "$id": "https://pucora.io/schema/flexible_config.json",
   "title": "Extended Flexible Configuration Schema",
   "description": "Schema validation for the latest version of Extended Flexible Configuration. Consider sticking to the specific version you are using",
   "examples": [

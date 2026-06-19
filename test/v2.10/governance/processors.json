@@ -1,6 +1,6 @@
 {
     "description": "Service level processors declaration",
-    "target": "https://velonetics.io/schema/v2.10/governance/processors.json",
+    "target": "https://pucora.io/schema/v2.10/governance/processors.json",
     "tests": [
         {
             "description": "All options",

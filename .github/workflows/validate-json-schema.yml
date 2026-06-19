@@ -15,8 +15,8 @@ jobs:
         run: make build
       - name: test
         run: make test
-      - name: Fail if velonetics.json changed
-        run: git diff --exit-code -- "$VERSION/velonetics.json"
+      - name: Fail if pucora.json changed
+        run: git diff --exit-code -- "$VERSION/pucora.json"
       - name: Notify JSON schema
         uses: slackapi/slack-github-action@v2.0.0
         if: ${{ github.head_ref == 'main' || github.ref_name == 'main' }} # check the target branch if it's main

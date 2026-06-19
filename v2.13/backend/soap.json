@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/backend/soap.json",
+  "$id": "https://pucora.io/schema/v2.13/backend/soap.json",
   "title": "SOAP Template modifier",
-  "description": "Build and modify requests to communicate with SOAP services. Available in Velonetics CE.\n\nSee: https://velonetics.io/docs/backends/soap/",
+  "description": "Build and modify requests to communicate with SOAP services. Available in Pucora CE.\n\nSee: https://pucora.io/docs/backends/soap/",
   "type": "object",
   "oneOf": [
     {

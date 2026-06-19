@@ -1,6 +1,6 @@
 {
     "description": "Service level quotas declaration",
-    "target": "https://velonetics.io/schema/v2.12/governance/quota.json",
+    "target": "https://pucora.io/schema/v2.12/governance/quota.json",
     "tests": [
         {
             "description": "All options",

@@ -1,6 +1,6 @@
 {
     "description": "Backend object test",
-    "target": "https://velonetics.io/schema/v2.10/validation/response-json-schema.json",
+    "target": "https://pucora.io/schema/v2.10/validation/response-json-schema.json",
     "tests": [
         {
             "description": "Missing schema",

@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.7/modifier/jmespath.json",
+  "$id": "https://pucora.io/schema/v2.7/modifier/jmespath.json",
   "title": " JMESPath: Response manipulation with query language",
-  "description": "The JMESPath query language allows you to select, slice, filter, map, project, flatten, sort, and all sorts of operations on data.\n\nSee: https://velonetics.io/docs/enterprise/endpoints/jmespath/",
+  "description": "The JMESPath query language allows you to select, slice, filter, map, project, flatten, sort, and all sorts of operations on data.\n\nSee: https://pucora.io/docs/enterprise/endpoints/jmespath/",
   "type": "object",
   "required": [ "expr" ],
   "properties": {
     "expr": {
       "title": "Expression",
-      "description": "The JMESPath expression you want to apply to this endpoint.\n\nSee: https://velonetics.io/docs/enterprise/endpoints/jmespath/",
+      "description": "The JMESPath expression you want to apply to this endpoint.\n\nSee: https://pucora.io/docs/enterprise/endpoints/jmespath/",
       "type": "string"
     }
   },

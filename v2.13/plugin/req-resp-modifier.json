@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/plugin/req-resp-modifier.json",
+  "$id": "https://pucora.io/schema/v2.13/plugin/req-resp-modifier.json",
   "title": "Request-Response modifier plugins",
   "type": "object",
   "properties": {
@@ -12,7 +12,7 @@
     },
     "name": {
       "title": "Plugin name",
-      "description": "An array with the names of plugins to load. The names are defined inside your plugin.\n\nSee: https://velonetics.io/docs/extending/plugin-modifiers/",
+      "description": "An array with the names of plugins to load. The names are defined inside your plugin.\n\nSee: https://pucora.io/docs/extending/plugin-modifiers/",
       "examples": [
         [ "myplugin" ]
       ],

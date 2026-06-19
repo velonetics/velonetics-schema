@@ -1,6 +1,6 @@
 {
   "description": "Conditional Routing test",
-  "target": "https://velonetics.io/schema/v2.12/ai/llm.json",
+  "target": "https://pucora.io/schema/v2.12/ai/llm.json",
   "tests": [
     {
       "description": "Valid minimum configuration with one provider",

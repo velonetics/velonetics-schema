@@ -1,6 +1,6 @@
 {
   "description": "JMESPath",
-  "schema": "https://velonetics.io/schema/v2.6/modifier/jmespath.json",
+  "schema": "https://pucora.io/schema/v2.6/modifier/jmespath.json",
   "tests": [
     {
       "description": "the empty object is invalid",

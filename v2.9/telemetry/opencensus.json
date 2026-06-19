@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.9/telemetry/opencensus.json",
+  "$id": "https://pucora.io/schema/v2.9/telemetry/opencensus.json",
   "title": "Telemetry via Opencensus",
-  "description": "Enables the extended logging capabilities.\n\nSee: https://velonetics.io/docs/telemetry/opencensus/",
+  "description": "Enables the extended logging capabilities.\n\nSee: https://pucora.io/docs/telemetry/opencensus/",
   "type": "object",
   "required": [ "exporters" ],
   "properties": {
@@ -12,19 +12,19 @@
       "properties": {
         "backend": {
           "title": "Report backend",
-          "description": "Reports the activity between Velonetics and your services",
+          "description": "Reports the activity between Pucora and your services",
           "default": false,
           "type": "boolean"
         },
         "pipe": {
           "title": "Report pipe",
-          "description": "Reports the activity at the beginning of the proxy layer. It gives a more detailed view of the internals of the pipe between end-users and Velonetics, having into account merging of different backends.",
+          "description": "Reports the activity at the beginning of the proxy layer. It gives a more detailed view of the internals of the pipe between end-users and Pucora, having into account merging of different backends.",
           "default": false,
           "type": "boolean"
         },
         "router": {
           "title": "Report router",
-          "description": "Reports the activity between end-users and Velonetics",
+          "description": "Reports the activity between end-users and Pucora",
           "default": false,
           "type": "boolean"
         }
@@ -44,7 +44,7 @@
         "datadog": {
           "$id": "#telemetry/opencensus/exporters/datadog",
           "title": "Datadog",
-          "description": "Datadog is a monitoring and security platform for developers, IT operations teams and business in the cloud.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+          "description": "Datadog is a monitoring and security platform for developers, IT operations teams and business in the cloud.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
           "type": "object",
           "required": [
             "namespace",
@@ -59,14 +59,14 @@
             "disable_count_per_buckets": {
               "$id": "#telemetry/opencensus/exporters/datadog/disable_count_per_buckets",
               "title": "Disable count per buckets",
-              "description": "Specifies whether to emit count_per_bucket metrics.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "Specifies whether to emit count_per_bucket metrics.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "default": false,
               "type": "boolean"
             },
             "global_tags": {
               "$id": "#telemetry/opencensus/exporters/datadog/global_tags",
               "title": "Global tags",
-              "description": "A set of tags (key/value) that will automatically be applied to all exported spans.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "A set of tags (key/value) that will automatically be applied to all exported spans.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "examples": [
                 {
                   "env": "prod"
@@ -77,20 +77,20 @@
             "namespace": {
               "$id": "#telemetry/opencensus/exporters/datadog/namespace",
               "title": "Namespace",
-              "description": "The namespace to which metric keys are appended.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "The namespace to which metric keys are appended.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "type": "string"
             },
             "service": {
               "$id": "#telemetry/opencensus/exporters/datadog/service",
               "title": "Service",
-              "description": "Service specifies the service name used for tracing\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "Service specifies the service name used for tracing\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "examples": [ "gateway" ],
               "type": "string"
             },
             "stats_address": {
               "$id": "#telemetry/opencensus/exporters/datadog/stats_address",
               "title": "Stats address",
-              "description": "Specifies the host[:port] address for DogStatsD. To enable ingestion using Unix Domain Socket (UDS) mount your UDS path and reference it in the stats_address using a path like `unix:///var/run/datadog/dsd.socket`.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "Specifies the host[:port] address for DogStatsD. To enable ingestion using Unix Domain Socket (UDS) mount your UDS path and reference it in the stats_address using a path like `unix:///var/run/datadog/dsd.socket`.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "examples": [ "localhost:8125" ],
               "default": "localhost:8125",
               "type": "string"
@@ -98,7 +98,7 @@
             "tags": {
               "$id": "#telemetry/opencensus/exporters/datadog/tags",
               "title": "Tags",
-              "description": "Specifies a set of global tags to attach to each metric.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "Specifies a set of global tags to attach to each metric.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "type": "array",
               "items": {
                 "type": "string"
@@ -107,7 +107,7 @@
             "trace_address": {
               "$id": "#telemetry/opencensus/exporters/datadog/trace_address",
               "title": "Trace address",
-              "description": "Specifies the host[:port] address of the Datadog Trace Agent.\n\nSee: https://velonetics.io/docs/telemetry/datadog/",
+              "description": "Specifies the host[:port] address of the Datadog Trace Agent.\n\nSee: https://pucora.io/docs/telemetry/datadog/",
               "default": "localhost:8126",
               "type": "string"
             }
@@ -120,35 +120,35 @@
         "influxdb": {
           "$id": "#telemetry/opencensus/exporters/influxdb",
           "title": "Influxdb",
-          "description": "Exports data to InfluxDB: A time series database designed to handle high write and query loads.\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
+          "description": "Exports data to InfluxDB: A time series database designed to handle high write and query loads.\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
           "type": "object",
           "required": [ "address", "db" ],
           "properties": {
             "address": {
               "$id": "#telemetry/opencensus/exporters/influxdb/address",
               "title": "Address",
-              "description": "The URL (including port) where your InfluxDB is installed.\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
+              "description": "The URL (including port) where your InfluxDB is installed.\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
               "examples": [ "http://192.168.99.100:8086" ],
               "type": "string"
             },
             "db": {
               "$id": "#telemetry/opencensus/exporters/influxdb/db",
               "title": "DB name",
-              "description": "The database name\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
-              "examples": [ "velonetics" ],
+              "description": "The database name\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
+              "examples": [ "pucora" ],
               "type": "string"
             },
             "password": {
               "$id": "#telemetry/opencensus/exporters/influxdb/password",
               "title": "Password",
-              "description": "The password to access the database\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
+              "description": "The password to access the database\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
               "examples": [ "kr4k3nd" ],
               "type": "string"
             },
             "timeout": {
               "$id": "#telemetry/opencensus/exporters/influxdb/timeout",
               "title": "Timeout",
-              "description": "The maximum time you will wait for InfluxDB to respond.\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
+              "description": "The maximum time you will wait for InfluxDB to respond.\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
               "examples": [ "2s" ],
               "$ref": "../timeunits.json#/$defs/timeunit",
               "type": "string"
@@ -156,8 +156,8 @@
             "username": {
               "$id": "#telemetry/opencensus/exporters/influxdb/username",
               "title": "Username",
-              "description": "The influxdb username to access the database\n\nSee: https://velonetics.io/docs/telemetry/influxdb/",
-              "examples": [ "velonetics" ],
+              "description": "The influxdb username to access the database\n\nSee: https://pucora.io/docs/telemetry/influxdb/",
+              "examples": [ "pucora" ],
               "type": "string"
             }
           },
@@ -169,7 +169,7 @@
         "jaeger": {
           "$id": "#telemetry/opencensus/exporters/jaeger",
           "title": "Jaeger",
-          "description": "Submit spans to a Jaeger Collector (HTTP) with `endpoint` or to a Jaeger Agent (UDP) with `agent_endpoint`. \n\nSee https://velonetics.io/docs/telemetry/jaeger/",
+          "description": "Submit spans to a Jaeger Collector (HTTP) with `endpoint` or to a Jaeger Agent (UDP) with `agent_endpoint`. \n\nSee https://pucora.io/docs/telemetry/jaeger/",
           "type": "object",
           "oneOf": [
             {
@@ -183,28 +183,28 @@
             "agent_endpoint": {
               "$id": "#telemetry/opencensus/exporters/jaeger/agent_endpoint",
               "title": "Agent Endpoint",
-              "description": "The address where the Jaeger Agent is (Thrift over UDP), e.g., `jaeger:6831`\n\nSee: https://velonetics.io/docs/telemetry/jaeger/",
+              "description": "The address where the Jaeger Agent is (Thrift over UDP), e.g., `jaeger:6831`\n\nSee: https://pucora.io/docs/telemetry/jaeger/",
               "examples": [ "http://192.168.99.100:14268/api/traces" ],
               "type": "string"
             },
             "buffer_max_count": {
               "$id": "#telemetry/opencensus/exporters/jaeger/buffer_max_count",
               "title": "Buffer max count",
-              "description": "Total number of traces to buffer in memory\n\nSee: https://velonetics.io/docs/telemetry/jaeger/",
+              "description": "Total number of traces to buffer in memory\n\nSee: https://pucora.io/docs/telemetry/jaeger/",
               "type": "integer"
             },
             "endpoint": {
               "$id": "#telemetry/opencensus/exporters/jaeger/endpoint",
               "title": "Collector Endpoint",
-              "description": "The full URL including port indicating where your Jaeger Collector is (Thrift over HTTP/S), e.g., `http://jaeger:14268/api/traces`\n\nSee: https://velonetics.io/docs/telemetry/jaeger/",
+              "description": "The full URL including port indicating where your Jaeger Collector is (Thrift over HTTP/S), e.g., `http://jaeger:14268/api/traces`\n\nSee: https://pucora.io/docs/telemetry/jaeger/",
               "examples": [ "http://192.168.99.100:14268/api/traces" ],
               "type": "string"
             },
             "service_name": {
               "$id": "#telemetry/opencensus/exporters/jaeger/service_name",
               "title": "Service name",
-              "description": "The service name registered in Jaeger\n\nSee: https://velonetics.io/docs/telemetry/jaeger/",
-              "examples": [ "velonetics" ],
+              "description": "The service name registered in Jaeger\n\nSee: https://pucora.io/docs/telemetry/jaeger/",
+              "examples": [ "pucora" ],
               "type": "string"
             }
           },
@@ -216,7 +216,7 @@
         "logger": {
           "$id": "#telemetry/opencensus/exporters/logger",
           "title": "Logger",
-          "description": "Opencensus can export data to the system logger as another exporter. Recommended to use `telemetry/logging` instead.\n\nSee: https://velonetics.io/docs/telemetry/logger/",
+          "description": "Opencensus can export data to the system logger as another exporter. Recommended to use `telemetry/logging` instead.\n\nSee: https://pucora.io/docs/telemetry/logger/",
           "type": "object",
           "properties": {
             "spans": {
@@ -240,28 +240,28 @@
         "ocagent": {
           "$id": "#telemetry/opencensus/exporters/ocagent",
           "title": "Ocagent",
-          "description": "Exporting metrics, logs, and events to the OpenCensus Agent.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+          "description": "Exporting metrics, logs, and events to the OpenCensus Agent.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
           "type": "object",
           "required": [ "address", "service_name" ],
           "properties": {
             "address": {
               "$id": "#telemetry/opencensus/exporters/ocagent/address",
               "title": "Address",
-              "description": "The address of your Azure Monitor collector.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "The address of your Azure Monitor collector.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "examples": [ "localhost:55678" ],
               "type": "string"
             },
             "enable_compression": {
               "$id": "#telemetry/opencensus/exporters/ocagent/enable_compression",
               "title": "Enable compression",
-              "description": "Whether to send data compressed or not.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "Whether to send data compressed or not.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "default": false,
               "type": "boolean"
             },
             "headers": {
               "$id": "#telemetry/opencensus/exporters/ocagent/headers",
               "title": "Headers",
-              "description": "List of keys and values for the headers sent. Keys and values must be of type string.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "List of keys and values for the headers sent. Keys and values must be of type string.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "examples": [
                 {
                   "header1": "value1"
@@ -272,14 +272,14 @@
             "insecure": {
               "$id": "#telemetry/opencensus/exporters/ocagent/insecure",
               "title": "Insecure",
-              "description": "Whether the connection can be established in plain (insecure) or not.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "Whether the connection can be established in plain (insecure) or not.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "default": false,
               "type": "boolean"
             },
             "reconnection": {
               "$id": "#telemetry/opencensus/exporters/ocagent/reconnection",
               "title": "Reconnection",
-              "description": "The reconnection time\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "The reconnection time\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "default": "2s",
               "$ref": "../timeunits.json#/$defs/timeunit",
               "type": "string"
@@ -287,7 +287,7 @@
             "service_name": {
               "$id": "#telemetry/opencensus/exporters/ocagent/service_name",
               "title": "Service name",
-              "description": "An identifier of your service, e.g, `velonetics`.\n\nSee: https://velonetics.io/docs/telemetry/ocagent/",
+              "description": "An identifier of your service, e.g, `pucora`.\n\nSee: https://pucora.io/docs/telemetry/ocagent/",
               "type": "string"
             }
           },
@@ -306,41 +306,41 @@
             "namespace": {
               "$id": "#telemetry/opencensus/exporters/prometheus/namespace",
               "title": "Namespace",
-              "description": "Sets the domain the metric belongs to.\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Sets the domain the metric belongs to.\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "type": "string"
             },
             "port": {
               "$id": "#telemetry/opencensus/exporters/prometheus/port",
               "title": "Port",
-              "description": "Port on which the Prometheus exporter should listen\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Port on which the Prometheus exporter should listen\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "examples": [ 9091 ],
               "type": "integer"
             },
             "tag_host": {
               "$id": "#telemetry/opencensus/exporters/prometheus/tag_host",
               "title": "Tag host",
-              "description": "Whether to send the host as a metric or not.\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Whether to send the host as a metric or not.\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "default": false,
               "type": "boolean"
             },
             "tag_method": {
               "$id": "#telemetry/opencensus/exporters/prometheus/tag_method",
               "title": "Tag method",
-              "description": "Whether to send the HTTP method as a metric or not.\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Whether to send the HTTP method as a metric or not.\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "default": true,
               "type": "boolean"
             },
             "tag_path": {
               "$id": "#telemetry/opencensus/exporters/prometheus/tag_path",
               "title": "Tag path",
-              "description": "Whether to send the path as a metric or not.\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Whether to send the path as a metric or not.\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "default": false,
               "type": "boolean"
             },
             "tag_statuscode": {
               "$id": "#telemetry/opencensus/exporters/prometheus/tag_statuscode",
               "title": "Tag status code",
-              "description": "Whether to send the status code as a metric or not.\n\nSee: https://velonetics.io/docs/telemetry/prometheus/",
+              "description": "Whether to send the status code as a metric or not.\n\nSee: https://pucora.io/docs/telemetry/prometheus/",
               "default": false,
               "type": "boolean"
             }
@@ -360,7 +360,7 @@
             "default_labels": {
               "$id": "#telemetry/opencensus/exporters/stackdriver/default_labels",
               "title": "Default_labels",
-              "description": "A map object. Enter here any label that will be assigned by default to the reported metric so you can filter later on Stack Driver.\n\nSee: https://velonetics.io/docs/telemetry/stackdriver/",
+              "description": "A map object. Enter here any label that will be assigned by default to the reported metric so you can filter later on Stack Driver.\n\nSee: https://pucora.io/docs/telemetry/stackdriver/",
               "examples": [
                 {
                   "env": "production"
@@ -371,13 +371,13 @@
             "metric_prefix": {
               "$id": "#telemetry/opencensus/exporters/stackdriver/metric_prefix",
               "title": "Metric_prefix",
-              "description": "A prefix that you can add to all your metrics for better organization.\n\nSee: https://velonetics.io/docs/telemetry/stackdriver/",
+              "description": "A prefix that you can add to all your metrics for better organization.\n\nSee: https://pucora.io/docs/telemetry/stackdriver/",
               "type": "string"
             },
             "project_id": {
               "$id": "#telemetry/opencensus/exporters/stackdriver/project_id",
               "title": "Project_id",
-              "description": "The identifier of your Google Cloud project. The `project_id` **is not the project name**. You can omit this value from the configuration if you have an application credential file for Google.\n\nSee: https://velonetics.io/docs/telemetry/stackdriver/",
+              "description": "The identifier of your Google Cloud project. The `project_id` **is not the project name**. You can omit this value from the configuration if you have an application credential file for Google.\n\nSee: https://pucora.io/docs/telemetry/stackdriver/",
               "examples": [ "ID" ],
               "default": "",
               "type": "string",
@@ -412,34 +412,34 @@
             "access_key_id": {
               "$id": "#telemetry/opencensus/exporters/xray/access_key_id",
               "title": "AWS access key id",
-              "description": " Your access key ID provided by Amazon. Needed when `use_env` is unset or set to false.\n\nSee: https://velonetics.io/docs/telemetry/xray/",
+              "description": " Your access key ID provided by Amazon. Needed when `use_env` is unset or set to false.\n\nSee: https://pucora.io/docs/telemetry/xray/",
               "type": "string"
             },
             "region": {
               "$id": "#telemetry/opencensus/exporters/xray/region",
               "title": "Region",
-              "description": "The AWS geographical region, e.g, `us-east-1`.\n\nSee: https://velonetics.io/docs/telemetry/xray/",
+              "description": "The AWS geographical region, e.g, `us-east-1`.\n\nSee: https://pucora.io/docs/telemetry/xray/",
               "examples": [ "eu-west-1" ],
               "type": "string"
             },
             "secret_access_key": {
               "$id": "#telemetry/opencensus/exporters/xray/secret_access_key",
               "title": "AWS secret access key",
-              "description": "Your secret access key provided by Amazon. Needed when `use_env` is unset or set to false.\n\nSee: https://velonetics.io",
+              "description": "Your secret access key provided by Amazon. Needed when `use_env` is unset or set to false.\n\nSee: https://pucora.io",
               "type": "string"
             },
             "use_env": {
               "$id": "#telemetry/opencensus/exporters/xray/use_env",
               "title": "Use_env",
-              "description": "When true the AWS credentials (access_key_id and secret_access_key) are taken from environment vars. Don't specify them then.\n\nSee: https://velonetics.io/docs/telemetry/xray/",
+              "description": "When true the AWS credentials (access_key_id and secret_access_key) are taken from environment vars. Don't specify them then.\n\nSee: https://pucora.io/docs/telemetry/xray/",
               "default": false,
               "type": "boolean"
             },
             "version": {
               "$id": "#telemetry/opencensus/exporters/xray/version",
               "title": "Version",
-              "description": "The version of the AWS X-Ray service to use.\n\nSee: https://velonetics.io/docs/telemetry/xray/",
-              "default": "Velonetics-opencensus",
+              "description": "The version of the AWS X-Ray service to use.\n\nSee: https://pucora.io/docs/telemetry/xray/",
+              "default": "Pucora-opencensus",
               "type": "string"
             }
           },
@@ -458,15 +458,15 @@
             "collector_url": {
               "$id": "#telemetry/opencensus/exporters/zipkin/collector_url",
               "title": "Collector URL",
-              "description": "The URL (including port and path) where your Zipkin is accepting the spans, e.g., `http://zipkin:9411/api/v2/spans`\n\nSee: https://velonetics.io/docs/telemetry/zipkin/",
+              "description": "The URL (including port and path) where your Zipkin is accepting the spans, e.g., `http://zipkin:9411/api/v2/spans`\n\nSee: https://pucora.io/docs/telemetry/zipkin/",
               "examples": [ "http://192.168.99.100:9411/api/v2/spans" ],
               "type": "string"
             },
             "service_name": {
               "$id": "#telemetry/opencensus/exporters/zipkin/service_name",
               "title": "Service name",
-              "description": "The service name registered in Zipkin.\n\nSee: https://velonetics.io/docs/telemetry/zipkin/",
-              "examples": [ "velonetics" ],
+              "description": "The service name registered in Zipkin.\n\nSee: https://pucora.io/docs/telemetry/zipkin/",
+              "examples": [ "pucora" ],
               "type": "string"
             }
           },
@@ -484,14 +484,14 @@
     "reporting_period": {
       "$id": "#telemetry/opencensus/reporting_period",
       "title": "Reporting period",
-      "description": "The number of seconds passing between reports. If duration is less than or equal to zero, it enables the default behavior of each exporter.\n\nSee: https://velonetics.io/docs/telemetry/opencensus/",
+      "description": "The number of seconds passing between reports. If duration is less than or equal to zero, it enables the default behavior of each exporter.\n\nSee: https://pucora.io/docs/telemetry/opencensus/",
       "default": 0,
       "type": "integer"
     },
     "sample_rate": {
       "$id": "#telemetry/opencensus/sample_rate",
       "title": "Sample rate",
-      "description": "A number between 0 (no requests at all) and 100 (all requests) representing the percentage of sampled requests you want to send to the exporter. **Sampling the 100% of the requests is generally discouraged** when the relationship between traffic and dedicated resources is sparse.\n\nSee: https://velonetics.io/docs/telemetry/opencensus/",
+      "description": "A number between 0 (no requests at all) and 100 (all requests) representing the percentage of sampled requests you want to send to the exporter. **Sampling the 100% of the requests is generally discouraged** when the relationship between traffic and dedicated resources is sparse.\n\nSee: https://pucora.io/docs/telemetry/opencensus/",
       "default": 0,
       "type": "integer",
       "maximum": 100,

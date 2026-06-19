@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/service_extra_config.json",
+  "$id": "https://pucora.io/schema/v2.13/service_extra_config.json",
   "title": "Schema definition for service extra_config",
   "type": "object",
   "properties": {
@@ -39,12 +39,12 @@
     },
     "modifier/request-body-extractor": {
       "title": "Request Body Extractor",
-      "description": "Enterprise only. [Extracts fields from the incoming request body](https://velonetics.io/docs/enterprise/endpoints/request-body-extractor/) and promotes them to request headers or query strings at the service level, applying to every incoming request.",
+      "description": "Enterprise only. [Extracts fields from the incoming request body](https://pucora.io/docs/enterprise/endpoints/request-body-extractor/) and promotes them to request headers or query strings at the service level, applying to every incoming request.",
       "$ref": "modifier/request-body-extractor.json"
     },
     "modifier/response-headers": {
       "title": "Response Headers modifier",
-      "description": "Enterprise only. Allows you to transform response headers declaratively.\n\nSee: https://velonetics.io/docs/enterprise/service-settings/response-headers-modifier/",
+      "description": "Enterprise only. Allows you to transform response headers declaratively.\n\nSee: https://pucora.io/docs/enterprise/service-settings/response-headers-modifier/",
       "$ref": "modifier/response-headers.json"
     },
     "plugin/http-server": {
@@ -52,7 +52,7 @@
     },
     "qos/ratelimit/service": {
       "title": "Service Rate-limiting",
-      "description": "Enterprise only. The service rate limit feature allows you to set the maximum requests per second a user or group of users can do to Velonetics and works analogously to the endpoint rate limit.\n\nSee: https://velonetics.io/docs/enterprise/service-settings/service-rate-limit/",
+      "description": "Enterprise only. The service rate limit feature allows you to set the maximum requests per second a user or group of users can do to Pucora and works analogously to the endpoint rate limit.\n\nSee: https://pucora.io/docs/enterprise/service-settings/service-rate-limit/",
       "$ref": "qos/ratelimit/router.json"
     },
     "qos/ratelimit/service/redis": {
@@ -72,7 +72,7 @@
     },
     "security/cors": {
       "title": "Cross Origin Resource Sharing",
-      "description": "When Velonetics endpoints are consumed from a browser, you might need to enable the Cross-Origin Resource Sharing (CORS) module as browsers restrict cross-origin HTTP requests initiated from scripts.\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+      "description": "When Pucora endpoints are consumed from a browser, you might need to enable the Cross-Origin Resource Sharing (CORS) module as browsers restrict cross-origin HTTP requests initiated from scripts.\n\nSee: https://pucora.io/docs/service-settings/cors/",
       "default": {
         "allow_methods": [ "POST", "GET" ],
         "allow_origins": [ "http://foobar.com" ],
@@ -83,7 +83,7 @@
       "properties": {
         "allow_credentials": {
           "title": "Allow_credentials",
-          "description": "When requests can include user credentials like cookies, HTTP authentication or client side SSL certificates\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "When requests can include user credentials like cookies, HTTP authentication or client side SSL certificates\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "default": true,
           "type": "boolean"
         },
@@ -97,12 +97,12 @@
         },
         "allow_methods": {
           "title": "Allowed methods",
-          "description": "The array of all HTTP methods accepted, in uppercase.\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "The array of all HTTP methods accepted, in uppercase.\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "type": "array",
           "uniqueItems": true,
           "items": {
             "title": "Object in array",
-            "description": "See: https://velonetics.io",
+            "description": "See: https://pucora.io",
             "enum": [
               "GET",
               "HEAD",
@@ -116,7 +116,7 @@
         },
         "allow_origins": {
           "title": "Allowed origins",
-          "description": "An array with all the origins allowed, examples of values are https://example.com, or * (any origin).\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "An array with all the origins allowed, examples of values are https://example.com, or * (any origin).\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "type": "array",
           "items": {
             "title": "Allowed origins list",
@@ -126,13 +126,13 @@
         },
         "debug": {
           "title": "Show debug",
-          "description": "Show debugging information in the logger, to be used only during development.\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "Show debugging information in the logger, to be used only during development.\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "default": true,
           "type": "boolean"
         },
         "expose_headers": {
           "title": "Expose headers",
-          "description": "Headers that are safe to expose to the API of a CORS API specification-\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "Headers that are safe to expose to the API of a CORS API specification-\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "default": [],
           "type": "array",
           "items": {
@@ -141,7 +141,7 @@
         },
         "max_age": {
           "title": "Max age",
-          "description": "For how long the response can be cached.\n\nSee: https://velonetics.io/docs/service-settings/cors/",
+          "description": "For how long the response can be cached.\n\nSee: https://pucora.io/docs/service-settings/cors/",
           "examples": [ "12h" ],
           "$ref": "timeunits.json#/$defs/timeunit",
           "type": "string"

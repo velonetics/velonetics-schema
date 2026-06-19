@@ -1,6 +1,6 @@
 {
     "description": "Backend object test",
-    "target": "https://velonetics.io/schema/v2.7/backend.json",
+    "target": "https://pucora.io/schema/v2.7/backend.json",
     "tests": [
         {
             "description": "Simple backend declaration with no host",
@@ -55,7 +55,7 @@
                     },
                     "auth/gcp": {
                         "audience": "https://gcptest-76fewi6rca-uc.a.run.app",
-                        "credentials_file": "/etc/velonetics/gcp.json",
+                        "credentials_file": "/etc/pucora/gcp.json",
                         "custom_claims": {
                             "a": 1
                         }

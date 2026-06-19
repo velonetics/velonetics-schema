@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.8/workflow_extra_config.json",
+  "$id": "https://pucora.io/schema/v2.8/workflow_extra_config.json",
   "title": "Schema definition for extra_config of workflows",
   "type": "object",
   "properties": {
@@ -27,41 +27,41 @@
         "combiner": {
           "$id": "#endpoint_extra_config/proxy/combiner",
           "title": "Custom combiner",
-          "description": "For custom builds of Velonetics only",
+          "description": "For custom builds of Pucora only",
           "examples": [ "combiner_name" ],
           "type": "string"
         },
         "flatmap_filter": {
           "$id": "#proxy/flatmap_filter",
           "title": "Flatmap (Array manipulation)",
-          "description": "The list of operations to **execute sequentially** (top down). Every operation is defined with an object containing two properties:\n\nSee: https://velonetics.io/docs/backends/flatmap/",
+          "description": "The list of operations to **execute sequentially** (top down). Every operation is defined with an object containing two properties:\n\nSee: https://pucora.io/docs/backends/flatmap/",
           "$ref": "proxy/flatmap.json",
           "type": "array"
         },
         "sequential": {
           "$id": "#endpoint_extra_config/proxy/sequential",
           "title": "Sequential proxy",
-          "description": "The sequential proxy allows you to chain backend requests, making calls dependent one of each other.\n\nSee: https://velonetics.io/docs/endpoints/sequential-proxy/",
+          "description": "The sequential proxy allows you to chain backend requests, making calls dependent one of each other.\n\nSee: https://pucora.io/docs/endpoints/sequential-proxy/",
           "default": true,
           "type": "boolean"
         },
         "static": {
           "$id": "#endpoint_extra_config/proxy/static",
           "title": "Static response",
-          "description": "The static proxy injects static data in the final response when the selected strategy matches.\n\nSee: https://velonetics.io/docs/endpoints/static-proxy/",
+          "description": "The static proxy injects static data in the final response when the selected strategy matches.\n\nSee: https://pucora.io/docs/endpoints/static-proxy/",
           "type": "object",
           "required": [ "data", "strategy" ],
           "properties": {
             "data": {
               "$id": "#endpoint_extra_config/proxy/static/data",
               "title": "Data",
-              "description": "The static data (as a JSON object) that you will return.\n\nSee: https://velonetics.io/docs/endpoints/static-proxy/",
+              "description": "The static data (as a JSON object) that you will return.\n\nSee: https://pucora.io/docs/endpoints/static-proxy/",
               "type": "object"
             },
             "strategy": {
               "$id": "#endpoint_extra_config/proxy/static/strategy",
               "title": "Strategy",
-              "description": "One of the supported strategies\n\nSee: https://velonetics.io/docs/endpoints/static-proxy/",
+              "description": "One of the supported strategies\n\nSee: https://pucora.io/docs/endpoints/static-proxy/",
               "enum": [
                 "always",
                 "success",
@@ -90,7 +90,7 @@
     },
     "validation/json-schema": {
       "title": "Validating the body with the JSON Schema",
-      "description": "apply automatic validations using the JSON Schema vocabulary before the content passes to the backends. The json schema component allows you to define validation rules on the body, type definition, or even validate the fields' values.\n\nSee: https://velonetics.io/docs/endpoints/json-schema/",
+      "description": "apply automatic validations using the JSON Schema vocabulary before the content passes to the backends. The json schema component allows you to define validation rules on the body, type definition, or even validate the fields' values.\n\nSee: https://pucora.io/docs/endpoints/json-schema/",
       "type": "object"
     }
   },

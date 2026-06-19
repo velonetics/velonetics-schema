@@ -1,6 +1,6 @@
 {
   "description": "response-headers",
-  "target": "https://velonetics.io/schema/v2.9/modifier/response-headers.json",
+  "target": "https://pucora.io/schema/v2.9/modifier/response-headers.json",
   "tests": [
     {
       "description": "happy case",
@@ -21,8 +21,8 @@
           ]
         },
         "delete": [
-          "X-Velonetics",
-          "X-Velonetics-Completed"
+          "X-Pucora",
+          "X-Pucora-Completed"
         ],
         "rename": {
           "Header-A": "Header-A-Renamed"

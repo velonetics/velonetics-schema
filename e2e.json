@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/e2e.json",
+  "$id": "https://pucora.io/schema/e2e.json",
   "title": "E2E Testing Schema",
-  "description": "Schema validation for the latest version of Velonetics End to End testing. Consider sticking to the specific version you are using",
+  "description": "Schema validation for the latest version of Pucora End to End testing. Consider sticking to the specific version you are using",
   "examples": [
     {
-      "$schema": "https://velonetics.io/schema/v2.13/e2e.json",
+      "$schema": "https://pucora.io/schema/v2.13/e2e.json",
       "@comment": "Makes sure that the debug endpoint returns a status ok",
       "in": {
         "header": {
@@ -20,7 +20,7 @@
         },
         "header": {
           "Cache-Control": [ "" ],
-          "X-Velonetics-Completed": [ "true" ],
+          "X-Pucora-Completed": [ "true" ],
           "content-type": [ "application/json; charset=utf-8" ]
         },
         "status_code": 200

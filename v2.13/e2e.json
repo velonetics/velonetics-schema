@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/e2e.json",
+  "$id": "https://pucora.io/schema/v2.13/e2e.json",
   "title": "Schema validation for End To End testing specs",
   "type": "object",
   "required": [ "in", "out" ],
   "properties": {
     "in": {
       "title": "Input",
-      "description": "The input request definition. At least you should define the URL used to connect to Velonetics",
+      "description": "The input request definition. At least you should define the URL used to connect to Pucora",
       "type": "object",
       "required": [ "url" ],
       "properties": {
@@ -21,7 +21,7 @@
           "description": "An optional map of headers you want to include in the request.",
           "examples": [
             {
-              "User-Agent": "velonetics e2e tool"
+              "User-Agent": "pucora e2e tool"
             }
           ],
           "type": "object"
@@ -73,7 +73,7 @@
         "properties": {
           "in": {
             "title": "Input",
-            "description": "The input request definition. At least you should define the URL used to connect to Velonetics",
+            "description": "The input request definition. At least you should define the URL used to connect to Pucora",
             "type": "object",
             "required": [ "url" ],
             "properties": {
@@ -87,7 +87,7 @@
                 "description": "An optional map of headers you want to include in the request.",
                 "examples": [
                   {
-                    "User-Agent": "velonetics e2e tool"
+                    "User-Agent": "pucora e2e tool"
                   }
                 ],
                 "type": "object"
@@ -138,7 +138,7 @@
                 "examples": [
                   {
                     "Cache-Control": [ "" ],
-                    "X-Velonetics-Completed": [ "true" ],
+                    "X-Pucora-Completed": [ "true" ],
                     "content-type": [ "application/json; charset=utf-8" ]
                   }
                 ],
@@ -205,7 +205,7 @@
           "examples": [
             {
               "Cache-Control": [ "" ],
-              "X-Velonetics-Completed": [ "true" ],
+              "X-Pucora-Completed": [ "true" ],
               "content-type": [ "application/json; charset=utf-8" ]
             }
           ],

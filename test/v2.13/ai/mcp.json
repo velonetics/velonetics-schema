@@ -1,6 +1,6 @@
 {
   "description": "AI MCP test",
-  "target": "https://velonetics.io/schema/v2.13/ai/mcp.json",
+  "target": "https://pucora.io/schema/v2.13/ai/mcp.json",
   "tests": [
     {
       "description": "Typical MCP server configuration with several attributes",

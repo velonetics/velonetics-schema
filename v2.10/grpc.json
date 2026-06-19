@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.10/grpc.json",
+  "$id": "https://pucora.io/schema/v2.10/grpc.json",
   "title": "gRPC server",
   "description": "Enterprise only. gRPC server integration",
   "type": "object",
@@ -8,11 +8,11 @@
   "properties": {
     "catalog": {
       "title": "Catalog definition",
-      "description": "The paths to the different `.pb` files you want to load, or the paths to directories containing `.pb` files. All content is scanned in the order of the list, and after fetching all files it resolves the dependencies of their imports. The order you use here is not important to resolve imports, but it matters when there are conflicts (different files using the same namespace and package type).\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+      "description": "The paths to the different `.pb` files you want to load, or the paths to directories containing `.pb` files. All content is scanned in the order of the list, and after fetching all files it resolves the dependencies of their imports. The order you use here is not important to resolve imports, but it matters when there are conflicts (different files using the same namespace and package type).\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
       "examples": [
         "./grpc/flights.pb",
         "./grpc/definitions",
-        "/etc/velonetics/grpc"
+        "/etc/pucora/grpc"
       ],
       "type": "array",
       "items": {
@@ -21,23 +21,23 @@
     },
     "server": {
       "title": "gRPC Server",
-      "description": "Defines the gRPC server properties.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+      "description": "Defines the gRPC server properties.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
       "type": "object",
       "properties": {
         "opentelemetry": {
           "title": "OpenTelemetry settings",
-          "description": "Overrides [OpenTelemetry settings](https://velonetics.io/docs/enterprise/telemetry/opentelemetry-layers-metrics/) for the gRPC server.",
+          "description": "Overrides [OpenTelemetry settings](https://pucora.io/docs/enterprise/telemetry/opentelemetry-layers-metrics/) for the gRPC server.",
           "type": "object",
           "properties": {
             "disable_metrics": {
               "title": "Disable metrics",
-              "description": "Whether you want to disable all metrics happening in the gRPC server.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+              "description": "Whether you want to disable all metrics happening in the gRPC server.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
               "default": false,
               "type": "boolean"
             },
             "disable_traces": {
               "title": "Disable trace",
-              "description": "Whether you want to disable all traces happening in the gRPC server.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+              "description": "Whether you want to disable all traces happening in the gRPC server.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
               "default": false,
               "type": "boolean"
             }
@@ -49,21 +49,21 @@
         },
         "services": {
           "title": "gRPC services",
-          "description": "Defines one object per available gRPC service.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+          "description": "Defines one object per available gRPC service.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
               "methods": {
                 "title": "Methods",
-                "description": "The gRPC methods available for this service. The `methods` entry is the gRPC equivalent of the HTTP `endpoints`, meaning that the `backend` object under `methods` can use the same configuration as HTTP, including all its `extra_config` parameters.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+                "description": "The gRPC methods available for this service. The `methods` entry is the gRPC equivalent of the HTTP `endpoints`, meaning that the `backend` object under `methods` can use the same configuration as HTTP, including all its `extra_config` parameters.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
                     "backend": {
                       "title": "Backend",
-                      "description": "An array with all the [backend objects](https://velonetics.io/docs/backends/) mapped to this method",
+                      "description": "An array with all the [backend objects](https://pucora.io/docs/backends/) mapped to this method",
                       "type": "array",
                       "minItems": 1,
                       "items": {
@@ -78,7 +78,7 @@
                       "properties": {
                         "auth/validator": {
                           "title": "JWT validation",
-                          "description": "The JWT validation for this method. The configuration underneath is exactly as in the [JWT validator](https://velonetics.io/docs/enterprise/authorization/jwt-validation/)",
+                          "description": "The JWT validation for this method. The configuration underneath is exactly as in the [JWT validator](https://pucora.io/docs/enterprise/authorization/jwt-validation/)",
                           "$ref": "auth/validator.json",
                           "type": "object"
                         }
@@ -90,7 +90,7 @@
                     },
                     "input_headers": {
                       "title": "Allowed Headers In",
-                      "description": "Defines the list of all client headers that you can use as gRPC metadata.\nBy default, Velonetics won't pass any header from the client to the backend. This list is **case-insensitive**. You can declare headers in lowercase, uppercase, or mixed.\nAn entry `[\"X-Something\"]` forwards a single `X-Something` header to the backend, ignoring everything else. A single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**).",
+                      "description": "Defines the list of all client headers that you can use as gRPC metadata.\nBy default, Pucora won't pass any header from the client to the backend. This list is **case-insensitive**. You can declare headers in lowercase, uppercase, or mixed.\nAn entry `[\"X-Something\"]` forwards a single `X-Something` header to the backend, ignoring everything else. A single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**).",
                       "examples": [ "X-Custom-Trace", "*" ],
                       "default": [],
                       "type": "array",
@@ -101,12 +101,12 @@
                     },
                     "name": {
                       "title": "Method name",
-                      "description": "The name of the published gRPC method.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+                      "description": "The name of the published gRPC method.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
                       "examples": [ "FindFlight" ],
                       "type": "string"
                     },
                     "payload_params": {
-                      "description": "Maps a property of the gRPC incoming payload to a `{parameter}` that you can inject and reuse in a `url_pattern`. It supports dot nation to access nested objects.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+                      "description": "Maps a property of the gRPC incoming payload to a `{parameter}` that you can inject and reuse in a `url_pattern`. It supports dot nation to access nested objects.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
                       "examples": [
                         {
                           "some.grpc.object": "param1"
@@ -123,7 +123,7 @@
               },
               "name": {
                 "title": "gRPC name",
-                "description": "The name of the published gRPC service.\n\nSee: https://velonetics.io/docs/enterprise/grpc/server/",
+                "description": "The name of the published gRPC service.\n\nSee: https://pucora.io/docs/enterprise/grpc/server/",
                 "examples": [ "flight_finder.Flights" ],
                 "type": "string"
               }

@@ -1,22 +1,22 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.2/qos/ratelimit/proxy.json",
+  "$id": "https://pucora.io/schema/v2.2/qos/ratelimit/proxy.json",
   "title": "Proxy ratelimit",
-  "description": "Restrict the rate of requests Velonetics makes to your backends.\n\nSee: https://velonetics.io/docs/backends/rate-limit/",
+  "description": "Restrict the rate of requests Pucora makes to your backends.\n\nSee: https://pucora.io/docs/backends/rate-limit/",
   "type": "object",
   "required": [ "max_rate", "capacity" ],
   "properties": {
     "capacity": {
       "$id": "#qos/ratelimit/proxy/capacity",
       "title": "Capacity",
-      "description": "The capacity according to the [token bucket algorithm](https://velonetics.io/docs/throttling/token-bucket/) with a `bucket capacity == tokens added per second` so Velonetics is able to allow some bursting on the request rates. Recommended value is `capacity == max_rate`.\n\nSee: https://velonetics.io/docs/backends/rate-limit/",
+      "description": "The capacity according to the [token bucket algorithm](https://pucora.io/docs/throttling/token-bucket/) with a `bucket capacity == tokens added per second` so Pucora is able to allow some bursting on the request rates. Recommended value is `capacity == max_rate`.\n\nSee: https://pucora.io/docs/backends/rate-limit/",
       "default": 1,
       "type": "integer"
     },
     "max_rate": {
       "$id": "#qos/ratelimit/proxy/max_rate",
       "title": "Max rate",
-      "description": "Maximum requests per second you want to accept in this backend. Use decimals for per-hour and per-minute strategies.\n\nSee: https://velonetics.io/docs/backends/rate-limit/",
+      "description": "Maximum requests per second you want to accept in this backend. Use decimals for per-hour and per-minute strategies.\n\nSee: https://pucora.io/docs/backends/rate-limit/",
       "examples": [ 0.5 ],
       "type": "number"
     }

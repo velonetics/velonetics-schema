@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.10/server/virtualhost.json",
+  "$id": "https://pucora.io/schema/v2.10/server/virtualhost.json",
   "title": "VirtualHost",
-  "description": "Enterprise only. The Virtual Host server allows you to run different configurations of Velonetics endpoints based on the host accessing the server.\n\nSee: https://velonetics.io/docs/enterprise/service-settings/virtual-hosts/",
+  "description": "Enterprise only. The Virtual Host server allows you to run different configurations of Pucora endpoints based on the host accessing the server.\n\nSee: https://pucora.io/docs/enterprise/service-settings/virtual-hosts/",
   "type": "object",
   "oneOf": [
     {
@@ -15,7 +15,7 @@
   "properties": {
     "aliased_hosts": {
       "title": "Virtualhosts with alias",
-      "description": "A map of all recognized virtual hosts where the key is the alias and the value the host name, including the port if it's not 443 or 80. The values declared here must match the content of the `Host` header passed by the client. The alias must be an alphanumeric string.\n\nSee: https://velonetics.io/docs/enterprise/service-settings/virtual-hosts/",
+      "description": "A map of all recognized virtual hosts where the key is the alias and the value the host name, including the port if it's not 443 or 80. The values declared here must match the content of the `Host` header passed by the client. The alias must be an alphanumeric string.\n\nSee: https://pucora.io/docs/enterprise/service-settings/virtual-hosts/",
       "examples": [
         {
           "user_api": "users.svc.example.com:9000"
@@ -32,7 +32,7 @@
     },
     "hosts": {
       "title": "Virtualhosts",
-      "description": "All recognized virtual hosts by Velonetics must be listed here. The values declared here must match the content of the `Host` header when passed by the client.\n\nSee: https://velonetics.io/docs/enterprise/service-settings/virtual-hosts/",
+      "description": "All recognized virtual hosts by Pucora must be listed here. The values declared here must match the content of the `Host` header when passed by the client.\n\nSee: https://pucora.io/docs/enterprise/service-settings/virtual-hosts/",
       "examples": [
         [ "api-a.example.com", "api-b.example.com" ]
       ],

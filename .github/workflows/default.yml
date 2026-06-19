@@ -4,6 +4,6 @@ on:
 name: Issue and PR hygiene
 jobs:
   stale:
-    uses: velonetics/.github/.github/workflows/stale.yml@main
+    uses: pucora/.github/.github/workflows/stale.yml@main
   lock-threads:
-    uses: velonetics/.github/.github/workflows/lock-threads.yml@main
+    uses: pucora/.github/.github/workflows/lock-threads.yml@main

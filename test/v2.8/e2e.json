@@ -1,6 +1,6 @@
 {
   "description": "E2E test",
-  "target": "https://velonetics.io/schema/v2.8/e2e.json",
+  "target": "https://pucora.io/schema/v2.8/e2e.json",
   "tests": [
     {
       "description": "Full test-case",
@@ -10,7 +10,7 @@
           "method": "GET",
           "url": "http://localhost:8080/__debug/something",
           "header": {
-            "User-Agent": "velonetics e2e tool"
+            "User-Agent": "pucora e2e tool"
           }
         },
         "out": {
@@ -23,7 +23,7 @@
             "Cache-Control": [
               ""
             ],
-            "X-Velonetics-Completed": [
+            "X-Pucora-Completed": [
               "true"
             ]
           },
@@ -44,7 +44,7 @@
               "method": "GET",
               "url": "http://localhost:8080/test/rate-limit-stateless",
               "header": {
-                "User-Agent": "velonetics e2e tool"
+                "User-Agent": "pucora e2e tool"
               }
             },
             "out": {

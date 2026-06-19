@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.6/telemetry/opentelemetry-endpoint.json",
+  "$id": "https://pucora.io/schema/v2.6/telemetry/opentelemetry-endpoint.json",
   "title": "OpenTelemetry Endpoint Override",
-  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
   "type": "object",
   "properties": {
     "exporters_override": {
@@ -20,7 +20,7 @@
         },
         "metric_reporting_period": {
           "title": "Reporting period",
-          "description": "Override how often you want to report and flush the metrics in seconds.\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Override how often you want to report and flush the metrics in seconds.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
           "type": "integer"
         },
         "trace_exporters": {
@@ -33,7 +33,7 @@
         },
         "trace_sample_rate": {
           "title": "Trace sample rate",
-          "description": "Overrides the sample rate for traces defines the percentage of reported traces. This option is key to reduce the amount of data generated (and resource usage), while you still can debug and troubleshoot issues. For instance, a number of `0.25` will report a 25% of the traces seen in the system.\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Overrides the sample rate for traces defines the percentage of reported traces. This option is key to reduce the amount of data generated (and resource usage), while you still can debug and troubleshoot issues. For instance, a number of `0.25` will report a 25% of the traces seen in the system.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
           "examples": [ 0.25 ],
           "type": "number",
           "maximum": 1,
@@ -47,18 +47,18 @@
     },
     "proxy": {
       "title": "Report proxy activity",
-      "description": "Reports the activity at the beginning of the proxy layer, including spawning the required requests to multiple backends, merging, endpoint transformation and any other internals of the proxy between the request processing and the backend communication\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+      "description": "Reports the activity at the beginning of the proxy layer, including spawning the required requests to multiple backends, merging, endpoint transformation and any other internals of the proxy between the request processing and the backend communication\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
       "type": "object",
       "properties": {
         "disable_metrics": {
           "title": "Disable metrics",
-          "description": "Whether you want to disable all metrics in this endpoint or not.\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Whether you want to disable all metrics in this endpoint or not.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
           "default": false,
           "type": "boolean"
         },
         "disable_traces": {
           "title": "Disable traces",
-          "description": "Whether you want to disable all traces in this endpoint or not.\n\nSee: https://velonetics.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Whether you want to disable all traces in this endpoint or not.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
           "default": false,
           "type": "boolean"
         }

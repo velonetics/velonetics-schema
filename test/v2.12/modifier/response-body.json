@@ -1,6 +1,6 @@
 {
   "description": "response-body",
-  "target": "https://velonetics.io/schema/v2.12/modifier/response-body.json",
+  "target": "https://pucora.io/schema/v2.12/modifier/response-body.json",
   "tests": [
     {
       "description": "Operations declared but no actions",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.7/qos/ratelimit/tiered.json",
+  "$id": "https://pucora.io/schema/v2.7/qos/ratelimit/tiered.json",
   "title": "Tiered Rate Limit",
   "description": "Enterprise only. Apply ratelimit based on tier match.",
   "type": "object",
@@ -20,7 +20,7 @@
         "properties": {
           "ratelimit": {
             "title": "Ratelimit",
-            "description": "The rate limit definition. This is an object with the same attributes the [service rate limit](https://velonetics.io/docs/enterprise/service-settings/service-rate-limit/) has.\n\nSee: /docs/enterprise/service-settings/tiered-rate-limit/",
+            "description": "The rate limit definition. This is an object with the same attributes the [service rate limit](https://pucora.io/docs/enterprise/service-settings/service-rate-limit/) has.\n\nSee: /docs/enterprise/service-settings/tiered-rate-limit/",
             "$ref": "router.json",
             "type": "object"
           },

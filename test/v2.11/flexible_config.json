@@ -1,6 +1,6 @@
 {
   "description": "Flexible config test",
-  "target": "https://velonetics.io/schema/v2.11/flexible_config.json",
+  "target": "https://pucora.io/schema/v2.11/flexible_config.json",
   "tests": [
     {
       "description": "Full test-case",

@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://velonetics.io/schema/v2.5/modifier/martian.json",
+  "$id": "https://pucora.io/schema/v2.5/modifier/martian.json",
   "title": "Martian modifiers",
-  "description": "The Martian component allows you to modify requests and responses with static data through a simple DSL definition in the configuration file.\n\nSee: https://velonetics.io/docs/endpoints/martian/",
+  "description": "The Martian component allows you to modify requests and responses with static data through a simple DSL definition in the configuration file.\n\nSee: https://pucora.io/docs/endpoints/martian/",
   "type": "object",
   "maxProperties": 1,
   "properties": {
     "body.Modifier": {
       "title": "Body Modifier",
-      "description": "The body.Modifier changes or sets the body of a request or response. The body must be uncompressed and Base64 encoded.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The body.Modifier changes or sets the body of a request or response. The body must be uncompressed and Base64 encoded.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "body" ],
       "properties": {
@@ -36,7 +36,7 @@
     },
     "cookie.Filter": {
       "title": "Cookie Filter",
-      "description": "The cookie.Filter executes the contained modifier when a cookie is provided under the name.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The cookie.Filter executes the contained modifier when a cookie is provided under the name.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "name" ],
       "properties": {
@@ -66,7 +66,7 @@
     },
     "cookie.Modifier": {
       "title": "Cookie Modifier",
-      "description": "Adds a cookie to a request or a response. If you set cookies in a response, the cookies are only set to the client when you use no-op encoding.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "Adds a cookie to a request or a response. If you set cookies in a response, the cookies are only set to the client when you use no-op encoding.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "name", "value" ],
       "properties": {
@@ -121,7 +121,7 @@
     },
     "fifo.Group": {
       "title": "FIFO group",
-      "description": "The fifo.Group holds a list of modifiers executed in first-in, first-out order.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The fifo.Group holds a list of modifiers executed in first-in, first-out order.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifiers" ],
       "properties": {
@@ -150,7 +150,7 @@
     },
     "header.Append": {
       "title": "Append a header",
-      "description": "\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "name", "value" ],
       "properties": {
@@ -175,7 +175,7 @@
     },
     "header.Blacklist": {
       "title": "Blacklist headers",
-      "description": "The header.Blacklist removes the listed headers under names in the request and response of the backend.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The header.Blacklist removes the listed headers under names in the request and response of the backend.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "names" ],
       "properties": {
@@ -199,7 +199,7 @@
     },
     "header.Copy": {
       "title": "Header Copy",
-      "description": "The header.Copy lets you duplicate a header using another name\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The header.Copy lets you duplicate a header using another name\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "from", "to" ],
       "properties": {
@@ -224,7 +224,7 @@
     },
     "header.Filter": {
       "title": "Header Filter",
-      "description": "The header.Filter executes its contained modifier if the request or response contain a header that matches the defined name and value. The value is optional, and only the header’s existence evaluates when undefined.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The header.Filter executes its contained modifier if the request or response contain a header that matches the defined name and value. The value is optional, and only the header’s existence evaluates when undefined.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "name" ],
       "properties": {
@@ -260,14 +260,14 @@
     },
     "header.Id": {
       "title": "Header Id",
-      "description": "\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope" ],
       "properties": {
         "header": {
           "title": "Header",
           "description": "The header name you want to use to save the ID. In the case the header is already set, the header is unmodified.",
-          "default": "X-Velonetics-Id",
+          "default": "X-Pucora-Id",
           "type": "string"
         },
         "scope": {
@@ -279,7 +279,7 @@
     },
     "header.Modifier": {
       "title": "Header Modifier",
-      "description": "The header.Modifier adds a new header or changes the value of an existing one.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The header.Modifier adds a new header or changes the value of an existing one.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "name", "value" ],
       "properties": {
@@ -304,7 +304,7 @@
     },
     "header.RegexFilter": {
       "title": "Header RegexFilter",
-      "description": "The header.RegexFilter checks that a regular expression (RE2 syntax) passes on the target header and, if it does, executes the modifier.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The header.RegexFilter checks that a regular expression (RE2 syntax) passes on the target header and, if it does, executes the modifier.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "header", "regex" ],
       "properties": {
@@ -336,7 +336,7 @@
     },
     "port.Filter": {
       "title": "Port Filter",
-      "description": "The port.Filter executes its modifier only when the port matches the one used in the request. It does not support else.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The port.Filter executes its modifier only when the port matches the one used in the request. It does not support else.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "port" ],
       "properties": {
@@ -363,7 +363,7 @@
     },
     "port.Modifier": {
       "title": "Port Modifier",
-      "description": "The port.Modifier alters the request URL and Host header to use the provided port.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The port.Modifier alters the request URL and Host header to use the provided port.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "oneOf": [
         {
@@ -398,7 +398,7 @@
     },
     "priority.Group": {
       "title": "Priority group",
-      "description": "The priority.Group contains the modifiers you want to execute, but the order in which they are declared is unimportant. Instead, each modifier adds a priority attribute that defines the order in which they are run.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The priority.Group contains the modifiers you want to execute, but the order in which they are declared is unimportant. Instead, each modifier adds a priority attribute that defines the order in which they are run.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifiers" ],
       "properties": {
@@ -432,7 +432,7 @@
     },
     "querystring.Filter": {
       "title": "QueryString Filter",
-      "description": "The querystring.Filter executes the modifier if the request or response contains a query string parameter that matches the defined name and value in the filter.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The querystring.Filter executes the modifier if the request or response contains a query string parameter that matches the defined name and value in the filter.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "name" ],
       "properties": {
@@ -468,7 +468,7 @@
     },
     "querystring.Modifier": {
       "title": "Querystring Modifier",
-      "description": "The querystring.Modifier adds a new query string or modifies existing ones in the request.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The querystring.Modifier adds a new query string or modifies existing ones in the request.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "name", "value" ],
       "properties": {
@@ -490,7 +490,7 @@
     },
     "stash.Modifier": {
       "title": "Stash Modifier",
-      "description": "The stash.Modifier creates a new header (or replaces an existing one with a matching name) containing the value of the original URL and all its query string parameters.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The stash.Modifier creates a new header (or replaces an existing one with a matching name) containing the value of the original URL and all its query string parameters.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "headerName" ],
       "properties": {
@@ -511,7 +511,7 @@
     },
     "url.Filter": {
       "title": "URL Filter",
-      "description": "The url.Filter executes its contained modifier if the request URL matches all of the provided parameters.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The url.Filter executes its contained modifier if the request URL matches all of the provided parameters.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier" ],
       "properties": {
@@ -558,7 +558,7 @@
     },
     "url.Modifier": {
       "title": "URL Modifier",
-      "description": "The url.Modifier allows you to change the URL despite what is set in the host and url_pattern combination.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The url.Modifier allows you to change the URL despite what is set in the host and url_pattern combination.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope" ],
       "properties": {
@@ -591,7 +591,7 @@
     },
     "url.RegexFilter": {
       "title": "URL RegexFilter",
-      "description": "The url.RegexFilter evaluates a regular expression (RE2 syntax) and executes the modifier desired when it matches, and the modifier declared under else when it does not.\n\nSee: https://velonetics.io/docs/backends/martian/",
+      "description": "The url.RegexFilter evaluates a regular expression (RE2 syntax) and executes the modifier desired when it matches, and the modifier declared under else when it does not.\n\nSee: https://pucora.io/docs/backends/martian/",
       "type": "object",
       "required": [ "scope", "modifier", "regex" ],
       "properties": {

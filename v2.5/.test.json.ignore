@@ -1,11 +1,11 @@
 {
-    "$schema": "./velonetics.json",
+    "$schema": "./pucora.json",
     "@comment": "This configuration is not valid from a functionality point of view, it's only used to test the schema.",
     "_comment": "Attribute not in schema, but ignored as it starts with _",
     "$comment": "Attribute not in schema, but ignored as it starts with $",
     "#comment": "Attribute not in schema, but ignored as it starts with #",
     "version": 3,
-    "name": "Velonetics configuration at MyCompany",
+    "name": "Pucora configuration at MyCompany",
     "port": 8080,
     "host": [
         "http://localhost:8080"
@@ -75,7 +75,7 @@
         ]
     },
     "plugin": {
-        "folder": "/opt/velonetics/plugins/",
+        "folder": "/opt/pucora/plugins/",
         "pattern": ".so"
     },
     "async_agent": [
@@ -109,7 +109,7 @@
                         },
                         "auth/gcp": {
                             "audience": "https://gcptest-76fewi6rca-uc.a.run.app",
-                            "credentials_file": "/etc/velonetics/gcp.json",
+                            "credentials_file": "/etc/pucora/gcp.json",
                             "custom_claims": {
                                 "a": 1
                             }
@@ -138,7 +138,7 @@
             ],
             "extra_config": {
                 "async/amqp": {
-                    "name": "velonetics",
+                    "name": "pucora",
                     "host": "amqp://guest:guest@localhost:5672/",
                     "exchange": "foo",
                     "durable": true,
@@ -1619,7 +1619,7 @@
         },
         "telemetry/logging": {
             "level": "CRITICAL",
-            "prefix": "[VELONETICS]",
+            "prefix": "[PUCORA]",
             "stdout": true,
             "syslog": false,
             "format": "custom",
@@ -1640,16 +1640,16 @@
             "address": "http://192.168.99.9:8086",
             "ttl": "25s",
             "buffer_size": 0,
-            "db": "velonetics",
+            "db": "pucora",
             "username": "your-influxdb-user",
             "password": "your-influxdb-password",
             "@extra_comment": "here"
         },
-        "github_com/velonetics/velonetics-influx": {
+        "github_com/pucora/velonetics-influx": {
             "address": "http://192.168.99.9:8086",
             "ttl": "25s",
             "buffer_size": 0,
-            "db": "velonetics",
+            "db": "pucora",
             "username": "your-influxdb-user",
             "password": "your-influxdb-password",
             "@extra_comment": "here"
@@ -1681,25 +1681,25 @@
                 },
                 "zipkin": {
                     "collector_url": "http://192.168.99.100:9411/api/v2/spans",
-                    "service_name": "velonetics",
+                    "service_name": "pucora",
                     "@extra_comment": "here"
                 },
                 "jaeger": {
                     "endpoint": "http://192.168.99.100:14268/api/traces",
-                    "service_name": "velonetics",
+                    "service_name": "pucora",
                     "@extra_comment": "here",
                     "buffer_max_count": 1000
                 },
                 "influxdb": {
                     "address": "http://192.168.99.100:8086",
-                    "db": "velonetics",
+                    "db": "pucora",
                     "timeout": "1s",
                     "password": "kr4k3nd",
-                    "username": "velonetics",
+                    "username": "pucora",
                     "@extra_comment": "here"
                 },
                 "prometheus": {
-                    "namespace": "velonetics",
+                    "namespace": "pucora",
                     "port": 9091,
                     "tag_host": false,
                     "tag_method": false,
@@ -1718,7 +1718,7 @@
                     "default_labels": {
                         "env": "production"
                     },
-                    "metric_prefix": "velonetics",
+                    "metric_prefix": "pucora",
                     "project_id": "1234",
                     "@extra_comment": "here"
                 },
@@ -1727,7 +1727,7 @@
                     "global_tags": {
                         "env": "prod"
                     },
-                    "namespace": "velonetics",
+                    "namespace": "pucora",
                     "service": "gateway",
                     "stats_address": "localhost:8125",
                     "tags": [
@@ -1744,7 +1744,7 @@
                     },
                     "insecure": true,
                     "reconnection": "2s",
-                    "service_name": "velonetics",
+                    "service_name": "pucora",
                     "@extra_comment": "here"
                 }
             }

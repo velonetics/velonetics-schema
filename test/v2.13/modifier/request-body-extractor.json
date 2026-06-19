@@ -1,6 +1,6 @@
 {
   "description": "request-body-extractor",
-  "target": "https://velonetics.io/schema/v2.13/modifier/request-body-extractor.json",
+  "target": "https://pucora.io/schema/v2.13/modifier/request-body-extractor.json",
   "tests": [
     {
       "description": "happy case with dotnotation and query_string",

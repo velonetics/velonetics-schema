@@ -5,7 +5,7 @@
     "method": "GET",
     "url": "http://localhost:8080/__debug/something",
     "header": {
-      "User-Agent": "velonetics e2e tool"
+      "User-Agent": "pucora e2e tool"
     }
   },
   "out": {
@@ -18,7 +18,7 @@
       "Cache-Control": [
         ""
       ],
-      "X-Velonetics-Completed": [
+      "X-Pucora-Completed": [
         "true"
       ]
     },

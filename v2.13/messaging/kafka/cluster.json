@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://velonetics.io/schema/v2.13/messaging/kafka/cluster.json",
+  "$id": "https://pucora.io/schema/v2.13/messaging/kafka/cluster.json",
   "title": "Kafka Cluster Connection",
   "description": "Enterprise only. Defines how to connect to a Kafka cluster",
   "type": "object",
@@ -16,7 +16,7 @@
     },
     "client_tls": {
       "title": "TLS client options",
-      "description": "Enables specific TLS connection options when connecting to the Kafke brokers. Supports all options under [TLS client settings](https://velonetics.io/docs/service-settings/tls/#client-tls-settings).\n\nSee: https://velonetics.io/docs/enterprise/backends/grpc/",
+      "description": "Enables specific TLS connection options when connecting to the Kafke brokers. Supports all options under [TLS client settings](https://pucora.io/docs/service-settings/tls/#client-tls-settings).\n\nSee: https://pucora.io/docs/enterprise/backends/grpc/",
       "$ref": "../../client_tls.json",
       "type": "object"
     },
@@ -57,7 +57,7 @@
     "client_id": {
       "title": "Client ID",
       "description": "A name to give to the client stablishing the connection",
-      "default": "Velonetics v[X].[Y].[Z]",
+      "default": "Pucora v[X].[Y].[Z]",
       "type": "string"
     },
     "rack_id": {
