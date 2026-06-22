@@ -1,6 +1,6 @@
 {
   "description": "martian",
-  "target": "https://pucora.io/schema/v2.11/modifier/martian.json",
+  "target": "https://pucora.in/schema/v2.11/modifier/martian.json",
   "tests": [
     {
       "description": "two modifiers without group are not possible",

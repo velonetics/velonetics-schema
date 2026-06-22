@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/e2e.json",
+  "$id": "https://pucora.in/schema/v2.13/e2e.json",
   "title": "Schema validation for End To End testing specs",
   "type": "object",
   "required": [ "in", "out" ],

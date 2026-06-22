@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.8/telemetry/opentelemetry-backend.json",
+  "$id": "https://pucora.in/schema/v2.8/telemetry/opentelemetry-backend.json",
   "title": "OpenTelemetry Backend Override",
-  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
+  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry-by-endpoint/",
   "type": "object",
   "properties": {
     "backend": {
       "title": "Report backend activity",
-      "description": "Reports the activity between Pucora and each of your backend services. This is the more granular layer.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+      "description": "Reports the activity between Pucora and each of your backend services. This is the more granular layer.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
       "type": "object",
       "properties": {
         "metrics": {
@@ -15,31 +15,31 @@
           "properties": {
             "detailed_connection": {
               "title": "Detailed HTTP connection metrics",
-              "description": "Whether you want to enable detailed metrics for the HTTP connection phase or not. Includes times to connect, DNS querying, and the TLS handshake.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to enable detailed metrics for the HTTP connection phase or not. Includes times to connect, DNS querying, and the TLS handshake.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "disable_stage": {
               "title": "Disable this stage",
-              "description": "Whether to turn off the metrics or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether to turn off the metrics or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "read_payload": {
               "title": "Detailed payload read",
-              "description": "Whether you want to enable metrics for the response reading payload or not (HTTP connection not taken into account).\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to enable metrics for the response reading payload or not (HTTP connection not taken into account).\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "round_trip": {
               "title": "Detailed Round Trip",
-              "description": "Whether you want to enable metrics for the actual HTTP request for the backend or not (manipulation not taken into account). This is the time your backend needs to produce a result.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to enable metrics for the actual HTTP request for the backend or not (manipulation not taken into account). This is the time your backend needs to produce a result.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "static_attributes": {
               "title": "static attributes",
-              "description": "a list of tags or labels you want to associate with these metrics.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "a list of tags or labels you want to associate with these metrics.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
               "examples": [
                 [
                   {
@@ -55,12 +55,12 @@
                 "properties": {
                   "key": {
                     "title": "key",
-                    "description": "the key, tag, or label name you want to use.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+                    "description": "the key, tag, or label name you want to use.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
                     "type": "string"
                   },
                   "value": {
                     "title": "value",
-                    "description": "the static value you want to assign to this key.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+                    "description": "the static value you want to assign to this key.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
                     "type": "string"
                   }
                 },
@@ -81,37 +81,37 @@
           "properties": {
             "detailed_connection": {
               "title": "Detailed HTTP connection",
-              "description": "Whether you want to add detailed trace attributes for the HTTP connection phase or not. Includes times to connect, DNS querying, and the TLS handshake.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to add detailed trace attributes for the HTTP connection phase or not. Includes times to connect, DNS querying, and the TLS handshake.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "disable_stage": {
               "title": "Disable this stage",
-              "description": "Whether to turn off the traces or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether to turn off the traces or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "read_payload": {
               "title": "Detailed payload read",
-              "description": "Whether you want to add trace attributes for the response reading payload or not (HTTP connection not taken into account).\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to add trace attributes for the response reading payload or not (HTTP connection not taken into account).\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "report_headers": {
               "title": "Report headers",
-              "description": "Whether you want to report the final headers that reached the backend.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to report the final headers that reached the backend.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "round_trip": {
               "title": "Detailed Round Trip",
-              "description": "Whether you want to add trace attributes for the actual HTTP request for the backend or not (manipulation not taken into account). This is the time your backend needs to produce a result.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether you want to add trace attributes for the actual HTTP request for the backend or not (manipulation not taken into account). This is the time your backend needs to produce a result.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             },
             "static_attributes": {
               "title": "static attributes",
-              "description": "a list of tags or labels you want to associate with these metrics.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "a list of tags or labels you want to associate with these metrics.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
               "examples": [
                 [
                   {
@@ -127,12 +127,12 @@
                 "properties": {
                   "key": {
                     "title": "key",
-                    "description": "the key, tag, or label name you want to use.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+                    "description": "the key, tag, or label name you want to use.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
                     "type": "string"
                   },
                   "value": {
                     "title": "value",
-                    "description": "the static value you want to assign to this key.\n\nsee: https://pucora.io/docs/telemetry/opentelemetry/",
+                    "description": "the static value you want to assign to this key.\n\nsee: https://pucora.in/docs/telemetry/opentelemetry/",
                     "type": "string"
                   }
                 },

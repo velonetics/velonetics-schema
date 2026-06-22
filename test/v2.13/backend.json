@@ -1,6 +1,6 @@
 {
     "description": "Backend object test",
-    "target": "https://pucora.io/schema/v2.13/backend.json",
+    "target": "https://pucora.in/schema/v2.13/backend.json",
     "tests": [
         {
             "description": "Empty host",

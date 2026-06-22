@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.9/backend/soap.json",
+  "$id": "https://pucora.in/schema/v2.9/backend/soap.json",
   "title": "SOAP Template modifier",
-  "description": "Enterprise only. Build and modify requests to communicate with SOAP services.\n\nSee: https://pucora.io/docs/backends/soap/",
+  "description": "Enterprise only. Build and modify requests to communicate with SOAP services.\n\nSee: https://pucora.in/docs/backends/soap/",
   "type": "object",
   "oneOf": [
     {
@@ -15,26 +15,26 @@
   "properties": {
     "content_type": {
       "title": "Content-Type",
-      "description": "The `Content-Type` used in your template, and that will be sent to the SOAP server. This is not the content-type the end-user sent in the request.\n\nSee: https://pucora.io/docs/backends/soap/",
+      "description": "The `Content-Type` used in your template, and that will be sent to the SOAP server. This is not the content-type the end-user sent in the request.\n\nSee: https://pucora.in/docs/backends/soap/",
       "examples": [ "application/xml", "text/xml" ],
       "default": "text/xml",
       "type": "string"
     },
     "debug": {
       "title": "Enable debug",
-      "description": "When `true`, shows useful information in the logs with `DEBUG` level about the input received and the body generated. Do not enable in production. Debug logs are multiline and designed fore developer readibility, not machine processing.\n\nSee: https://pucora.io/docs/backends/soap/",
+      "description": "When `true`, shows useful information in the logs with `DEBUG` level about the input received and the body generated. Do not enable in production. Debug logs are multiline and designed fore developer readibility, not machine processing.\n\nSee: https://pucora.in/docs/backends/soap/",
       "default": false,
       "type": "boolean"
     },
     "path": {
       "title": "Path to template",
-      "description": "The path to the Go template file you want to use to craft the body.\n\nSee: https://pucora.io/docs/backends/soap/",
+      "description": "The path to the Go template file you want to use to craft the body.\n\nSee: https://pucora.in/docs/backends/soap/",
       "examples": [ "./path/to.xml" ],
       "type": "string"
     },
     "template": {
       "title": "Template",
-      "description": "An inline base64 encoded Go template with the body XML content you want to send to the SOAP service. This option is useful if you don't want to rely on external files and embed the template in the configuration.\n\nSee: https://pucora.io/docs/backends/soap/",
+      "description": "An inline base64 encoded Go template with the body XML content you want to send to the SOAP service. This option is useful if you don't want to rely on external files and embed the template in the configuration.\n\nSee: https://pucora.in/docs/backends/soap/",
       "type": "string"
     }
   },

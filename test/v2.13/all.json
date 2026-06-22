@@ -1,6 +1,6 @@
 {
     "description": "Full JSON Schema test",
-    "target": "https://pucora.io/schema/v2.13/pucora.json",
+    "target": "https://pucora.in/schema/v2.13/pucora.json",
     "tests": [
         {
             "description": "Full test-case",

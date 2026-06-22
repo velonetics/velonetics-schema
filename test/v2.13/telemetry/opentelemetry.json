@@ -1,6 +1,6 @@
 {
     "description": "Backend object test",
-    "target": "https://pucora.io/schema/v2.13/telemetry/opentelemetry.json",
+    "target": "https://pucora.in/schema/v2.13/telemetry/opentelemetry.json",
     "tests": [
         {
             "description": "Missing schema",

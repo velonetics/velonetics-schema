@@ -1,6 +1,6 @@
 {
   "description": "response-headers",
-  "target": "https://pucora.io/schema/v2.7/modifier/response-headers.json",
+  "target": "https://pucora.in/schema/v2.7/modifier/response-headers.json",
   "tests": [
     {
       "description": "happy case",

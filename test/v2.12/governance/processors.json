@@ -1,6 +1,6 @@
 {
     "description": "Service level processors declaration",
-    "target": "https://pucora.io/schema/v2.12/governance/processors.json",
+    "target": "https://pucora.in/schema/v2.12/governance/processors.json",
     "tests": [
         {
             "description": "All options",

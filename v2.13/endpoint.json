@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/endpoint.json",
+  "$id": "https://pucora.in/schema/v2.13/endpoint.json",
   "title": "Endpoint Object",
   "default": {
     "backend": [
@@ -15,7 +15,7 @@
   "properties": {
     "backend": {
       "title": "Backend",
-      "description": "An array with all the backend services you want to use in this endpoint. See [the backend object](https://pucora.io/docs/backends/) documentation to know all the available options, they are omitted here for brevity.\n\nSee: https://pucora.io/docs/backends/",
+      "description": "An array with all the backend services you want to use in this endpoint. See [the backend object](https://pucora.in/docs/backends/) documentation to know all the available options, they are omitted here for brevity.\n\nSee: https://pucora.in/docs/backends/",
       "type": "array",
       "minItems": 1,
       "items": {
@@ -25,12 +25,12 @@
     },
     "cache_ttl": {
       "title": "Cache TTL",
-      "description": "Sets or overrides the cache headers to inform how long the client or CDN can cache the request to this endpoint. Setting this value to a zero-value will use the `cache_ttl` in the root of the configuration if any. This attribute **does not cache** content but tells others how to do it. For caching, see [Caching Backend Responses](https://pucora.io/docs/backends/caching/).",
+      "description": "Sets or overrides the cache headers to inform how long the client or CDN can cache the request to this endpoint. Setting this value to a zero-value will use the `cache_ttl` in the root of the configuration if any. This attribute **does not cache** content but tells others how to do it. For caching, see [Caching Backend Responses](https://pucora.in/docs/backends/caching/).",
       "$ref": "timeunits.json#/$defs/timeunit"
     },
     "concurrent_calls": {
       "title": "Concurrent calls",
-      "description": "The concurrent requests are an excellent technique to improve the response times and decrease error rates by requesting in parallel the same information multiple times. Yes, you make the same request to several backends instead of asking to just one. When the first backend returns the information, the remaining requests are canceled.\n\nSee: https://pucora.io/docs/endpoints/concurrent-requests/",
+      "description": "The concurrent requests are an excellent technique to improve the response times and decrease error rates by requesting in parallel the same information multiple times. Yes, you make the same request to several backends instead of asking to just one. When the first backend returns the information, the remaining requests are canceled.\n\nSee: https://pucora.in/docs/endpoints/concurrent-requests/",
       "default": 1,
       "type": "integer",
       "maximum": 5,
@@ -38,7 +38,7 @@
     },
     "endpoint": {
       "title": "Endpoint",
-      "description": "The path of the URL you want to expose. The path is **case-sensitive** and should start with a slash `/`. You can use `{placeholders}` to allow dynamic variables. For example: `/foo/{var}/baz`. You can also add an ending `/*` in the path to enable [wildcards](https://pucora.io/docs/enterprise/endpoints/wildcard/). Enterprise only.\nThe router will try to automatically redirect calls to endpoints with an incorrect case or incorrect trailing slash to its correct version offering a `301`. There are no guarantees that it will succeed and the request might even fail completely while trying (and log an ugly error with a trace). The **safest option** is to [disable automatic redirections](https://pucora.io/docs/service-settings/router-options/) by setting to true the flags `disable_redirect_fixed_path` and `disable_redirect_trailing_slash` in the `router` options.\n**Limitations**: URLs do not support colons `:` in their definition. All `{vars}` are meant to be isolated in the path and not to be used to build words, like in `/file.{ext}` [See `disable_rest` for that usage](https://pucora.io/docs/service-settings/http-server-settings/#disable_rest).\n\nSee: https://pucora.io/docs/endpoints/",
+      "description": "The path of the URL you want to expose. The path is **case-sensitive** and should start with a slash `/`. You can use `{placeholders}` to allow dynamic variables. For example: `/foo/{var}/baz`. You can also add an ending `/*` in the path to enable [wildcards](https://pucora.in/docs/enterprise/endpoints/wildcard/). Enterprise only.\nThe router will try to automatically redirect calls to endpoints with an incorrect case or incorrect trailing slash to its correct version offering a `301`. There are no guarantees that it will succeed and the request might even fail completely while trying (and log an ugly error with a trace). The **safest option** is to [disable automatic redirections](https://pucora.in/docs/service-settings/router-options/) by setting to true the flags `disable_redirect_fixed_path` and `disable_redirect_trailing_slash` in the `router` options.\n**Limitations**: URLs do not support colons `:` in their definition. All `{vars}` are meant to be isolated in the path and not to be used to build words, like in `/file.{ext}` [See `disable_rest` for that usage](https://pucora.in/docs/service-settings/http-server-settings/#disable_rest).\n\nSee: https://pucora.in/docs/endpoints/",
       "examples": [ "/new-endpoint", "/foo/{var}", "/foo/{var1}/{var2}" ],
       "type": "string",
       "pattern": "^\\/[^\\*\\?\\&\\%]*(\\/\\*)?$"
@@ -51,7 +51,7 @@
     },
     "input_headers": {
       "title": "Allowed Headers In",
-      "description": "Defines the list of all headers allowed to reach the backend when passed.\nBy default, Pucora won't pass any header from the client to the backend. This list is **case-insensitive**. You can declare headers in lowercase, uppercase, or mixed.\nAn entry `[\"Cookie\"]` forwards all cookies, and a single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**), including cookies. See [headers forwarding](https://pucora.io/docs/endpoints/parameter-forwarding/#headers-forwarding)",
+      "description": "Defines the list of all headers allowed to reach the backend when passed.\nBy default, Pucora won't pass any header from the client to the backend. This list is **case-insensitive**. You can declare headers in lowercase, uppercase, or mixed.\nAn entry `[\"Cookie\"]` forwards all cookies, and a single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**), including cookies. See [headers forwarding](https://pucora.in/docs/endpoints/parameter-forwarding/#headers-forwarding)",
       "default": [],
       "type": "array",
       "uniqueItems": true,
@@ -62,7 +62,7 @@
     },
     "input_query_strings": {
       "title": "Allowed Query String parameters",
-      "description": "Defines the exact list of quey strings parameters that are allowed to reach the backend. This list is **case-sensitive**.\nBy default, Pucora won't pass any query string to the backend.\nA single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**)\n\nSee: https://pucora.io/docs/endpoints/parameter-forwarding/",
+      "description": "Defines the exact list of quey strings parameters that are allowed to reach the backend. This list is **case-sensitive**.\nBy default, Pucora won't pass any query string to the backend.\nA single star element `[\"*\"]` as value forwards everything to the backend (**it's safer to avoid this option**)\n\nSee: https://pucora.in/docs/endpoints/parameter-forwarding/",
       "default": [],
       "type": "array",
       "uniqueItems": true,
@@ -73,13 +73,13 @@
     },
     "method": {
       "title": "Method",
-      "description": "The method supported by this endpoint. Create multiple endpoint entries if you need different methods.\n\nSee: https://pucora.io/docs/endpoints/",
+      "description": "The method supported by this endpoint. Create multiple endpoint entries if you need different methods.\n\nSee: https://pucora.in/docs/endpoints/",
       "default": "GET",
       "enum": [ "GET", "POST", "PUT", "PATCH", "DELETE" ]
     },
     "output_encoding": {
       "title": "Output encoding",
-      "description": "The gateway can work with several content types, even allowing your clients to choose how to consume the content. See the [supported encodings](https://pucora.io/docs/endpoints/content-types/)",
+      "description": "The gateway can work with several content types, even allowing your clients to choose how to consume the content. See the [supported encodings](https://pucora.in/docs/endpoints/content-types/)",
       "default": "json",
       "enum": [
         "json",

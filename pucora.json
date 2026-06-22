@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/pucora.json",
+  "$id": "https://pucora.in/schema/pucora.json",
   "title": "Pucora Configuration Schema",
   "description": "Schema validation for the latest version of Pucora. Consider sticking to the specific version you are using",
   "examples": [

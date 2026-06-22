@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.4/timeunits.json",
+  "$id": "https://pucora.in/schema/v2.4/timeunits.json",
   "title": "Time units / Duration patterns",
   "$defs": {
     "timeunit": {

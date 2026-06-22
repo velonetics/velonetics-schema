@@ -1,6 +1,6 @@
 {
   "description": "AI MCP test",
-  "target": "https://pucora.io/schema/v2.12/ai/mcp.json",
+  "target": "https://pucora.in/schema/v2.12/ai/mcp.json",
   "tests": [
     {
       "description": "Typical MCP server configuration with several attributes",

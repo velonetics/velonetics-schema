@@ -1,6 +1,6 @@
 {
     "description": "Service level quotas declaration",
-    "target": "https://pucora.io/schema/v2.13/governance/quota.json",
+    "target": "https://pucora.in/schema/v2.13/governance/quota.json",
     "tests": [
         {
             "description": "All options",

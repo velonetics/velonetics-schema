@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.1/backend_extra_config.json",
+  "$id": "https://pucora.in/schema/v2.1/backend_extra_config.json",
   "title": "Extra configuration for backends",
   "type": "object",
   "properties": {
@@ -28,12 +28,12 @@
       "properties": {
         "return_error_code": {
           "title": "Return error code",
-          "description": "Returns the HTTP status code of the backend (when there is only one). The headers are not returned.\n\nSee: https://pucora.io/docs/backends/detailed-errors/",
+          "description": "Returns the HTTP status code of the backend (when there is only one). The headers are not returned.\n\nSee: https://pucora.in/docs/backends/detailed-errors/",
           "type": "boolean"
         },
         "return_error_details": {
           "title": "Return error details",
-          "description": "Returns to the client details of a failing request.\n\nSee: https://pucora.io/docs/backends/detailed-errors/",
+          "description": "Returns to the client details of a failing request.\n\nSee: https://pucora.in/docs/backends/detailed-errors/",
           "type": "string"
         }
       }
@@ -52,7 +52,7 @@
     },
     "modifier/martian": {
       "title": "Martian modifiers",
-      "description": "Transform requests and responses through a simple DSL definition in the configuration file.\n\nSee: https://pucora.io/docs/backends/martian/",
+      "description": "Transform requests and responses through a simple DSL definition in the configuration file.\n\nSee: https://pucora.in/docs/backends/martian/",
       "type": "object",
       "minProperties": 1
     },
@@ -70,12 +70,12 @@
     },
     "qos/http-cache": {
       "title": "Backend Cache",
-      "description": "Enable in-memory caching for backend responses for as long as its Cache-Control header permits.\n\nSee: https://pucora.io/docs/backends/caching/",
+      "description": "Enable in-memory caching for backend responses for as long as its Cache-Control header permits.\n\nSee: https://pucora.in/docs/backends/caching/",
       "type": "object",
       "properties": {
         "shared": {
           "title": "Shared cache",
-          "description": "The `shared` cache makes that different backend definitions with this flag enabled can reuse the cache. When the `shared` flag is missing or set to false, the backend uses its own cache private context.\n\nSee: https://pucora.io/docs/backends/detailed-errors/",
+          "description": "The `shared` cache makes that different backend definitions with this flag enabled can reuse the cache. When the `shared` flag is missing or set to false, the backend uses its own cache private context.\n\nSee: https://pucora.in/docs/backends/detailed-errors/",
           "type": "boolean"
         }
       },

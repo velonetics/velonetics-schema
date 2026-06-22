@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/messaging/kafka/reader.json",
+  "$id": "https://pucora.in/schema/v2.13/messaging/kafka/reader.json",
   "title": "Kafka Reader",
   "description": "Enterprise only. Defines how to read messages from a Kafka cluster",
   "type": "object",

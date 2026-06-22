@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.8/documentation/postman_endpoint.json",
+  "$id": "https://pucora.in/schema/v2.8/documentation/postman_endpoint.json",
   "title": "Generate documentation using Postman collections",
-  "description": "Enterprise only. Generates postman documentation automatically through `pucora postman export` command.\n\nSee: https://pucora.io/docs/enterprise/developer/postman/",
+  "description": "Enterprise only. Generates postman documentation automatically through `pucora postman export` command.\n\nSee: https://pucora.in/docs/enterprise/developer/postman/",
   "type": "object",
   "properties": {
     "description": {
       "$id": "#documentation/postman_endpoint/description",
       "title": "Endpoint description",
-      "description": "An introductory, optionally verbose, explanation supporting Markdown syntax. If you'd like to load an **external markdown file**, you can use flexible configuration, for instance `\"description\": {{include \"postman/intro.md\" | toJson }}`\n\nSee: https://pucora.io/docs/enterprise/developer/postman/",
+      "description": "An introductory, optionally verbose, explanation supporting Markdown syntax. If you'd like to load an **external markdown file**, you can use flexible configuration, for instance `\"description\": {{include \"postman/intro.md\" | toJson }}`\n\nSee: https://pucora.in/docs/enterprise/developer/postman/",
       "examples": [
-        "Hi there, I am a [postman endpoint](https://pucora.io/docs/enterprise/developer/postman/)"
+        "Hi there, I am a [postman endpoint](https://pucora.in/docs/enterprise/developer/postman/)"
       ],
       "type": "string"
     },
@@ -24,7 +24,7 @@
     "name": {
       "$id": "#documentation/postman_endpoint/name",
       "title": "Endpoint Name",
-      "description": "The name of the endpoint you are generating. If you don't set any name the last member path is used.\n\nSee: https://pucora.io/docs/enterprise/developer/postman/",
+      "description": "The name of the endpoint you are generating. If you don't set any name the last member path is used.\n\nSee: https://pucora.in/docs/enterprise/developer/postman/",
       "examples": [ "List books", "Create user" ],
       "type": "string"
     }

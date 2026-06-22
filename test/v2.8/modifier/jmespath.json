@@ -1,6 +1,6 @@
 {
   "description": "JMESPath",
-  "target": "https://pucora.io/schema/v2.8/modifier/jmespath.json",
+  "target": "https://pucora.in/schema/v2.8/modifier/jmespath.json",
   "tests": [
     {
       "description": "the empty object is invalid",

@@ -1,6 +1,6 @@
 {
   "description": "response-body",
-  "target": "https://pucora.io/schema/v2.13/modifier/response-body.json",
+  "target": "https://pucora.in/schema/v2.13/modifier/response-body.json",
   "tests": [
     {
       "description": "Operations declared but no actions",

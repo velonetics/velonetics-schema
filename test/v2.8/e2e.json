@@ -1,6 +1,6 @@
 {
   "description": "E2E test",
-  "target": "https://pucora.io/schema/v2.8/e2e.json",
+  "target": "https://pucora.in/schema/v2.8/e2e.json",
   "tests": [
     {
       "description": "Full test-case",

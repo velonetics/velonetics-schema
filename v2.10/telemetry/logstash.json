@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.10/telemetry/logstash.json",
+  "$id": "https://pucora.in/schema/v2.10/telemetry/logstash.json",
   "title": "Logstash",
-  "description": "Enables logstash when the extra_config \"telemetry/logging\" is also present.\n\nSee: https://pucora.io/docs/logging/logstash/",
+  "description": "Enables logstash when the extra_config \"telemetry/logging\" is also present.\n\nSee: https://pucora.in/docs/logging/logstash/",
   "type": "object",
   "required": [ "enabled" ],
   "properties": {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/websocket.json",
+  "$id": "https://pucora.in/schema/v2.13/websocket.json",
   "title": "Schema definition for Websockets",
   "description": "Enables WebSocket communication (RFC-6455) with multiplexing or direct backend proxying.\n\nSee: https://github.com/pucora/pucora-ce/blob/main/docs/websockets.md",
   "type": "object",

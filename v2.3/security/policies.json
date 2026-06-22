@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.3/security/policies.json",
+  "$id": "https://pucora.in/schema/v2.3/security/policies.json",
   "title": "Securiy Policies",
-  "description": "Enterprise only. The policies engine allows you to write custom sets of policies that are validated during requests, responses, or token validation.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+  "description": "Enterprise only. The policies engine allows you to write custom sets of policies that are validated during requests, responses, or token validation.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
   "type": "object",
   "anyOf": [
     {
@@ -36,13 +36,13 @@
     },
     "jwt": {
       "title": "JWT policies",
-      "description": "All the policies applied in the JWT context (token validation). **You must configure `auth/validator`** for the policies to run, otherwise they will be skipped. Any policy failing will generate a `401 Unauthorized` error. Works in `endpoint` context only, this option is **not available under `backend`**.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+      "description": "All the policies applied in the JWT context (token validation). **You must configure `auth/validator`** for the policies to run, otherwise they will be skipped. Any policy failing will generate a `401 Unauthorized` error. Works in `endpoint` context only, this option is **not available under `backend`**.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
       "type": "object",
       "required": [ "policies" ],
       "properties": {
         "policies": {
           "title": "Policies",
-          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
           "type": "array",
           "items": {
             "title": "The policy you want to evaluate",
@@ -57,7 +57,7 @@
     },
     "req": {
       "title": "Request policies",
-      "description": "All the policies applied in the request context.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+      "description": "All the policies applied in the request context.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
       "type": "object",
       "required": [ "policies" ],
       "properties": {
@@ -66,19 +66,19 @@
           "properties": {
             "body": {
               "title": "Error body",
-              "description": "Leave an empty string to use the validation error, or write a string with the error response body. This error is NOT returned in the response, but in the application logs, unless you enable `return_detailed_errors` in the `router` section. You can add escaped JSON, XML, etc in the string and add a Content-Type.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "Leave an empty string to use the validation error, or write a string with the error response body. This error is NOT returned in the response, but in the application logs, unless you enable `return_detailed_errors` in the `router` section. You can add escaped JSON, XML, etc in the string and add a Content-Type.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": "",
               "type": "string"
             },
             "content_type": {
               "title": "Content-Type",
-              "description": "The Content-Type header you'd like to send with the error response. When unset, uses `text/plain` by default.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "The Content-Type header you'd like to send with the error response. When unset, uses `text/plain` by default.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": "text/plain",
               "type": "string"
             },
             "status": {
               "title": "HTTP status code",
-              "description": "The HTTP status code you want to return when the validation fails.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "The HTTP status code you want to return when the validation fails.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": 500,
               "type": "integer"
             }
@@ -86,7 +86,7 @@
         },
         "policies": {
           "title": "Policies",
-          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
           "type": "array",
           "items": {
             "title": "The policy you want to evaluate",
@@ -101,7 +101,7 @@
     },
     "resp": {
       "title": "Response policies",
-      "description": "All the policies applied in the response context.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+      "description": "All the policies applied in the response context.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
       "type": "object",
       "required": [ "policies" ],
       "properties": {
@@ -110,19 +110,19 @@
           "properties": {
             "body": {
               "title": "Error body",
-              "description": "Leave an empty string to use the validation error, or write a string with the error response body. This error is NOT returned in the response, but in the application logs, unless you enable `return_detailed_errors` in the `router` section. You can add escaped JSON, XML, etc in the string and add a Content-Type.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "Leave an empty string to use the validation error, or write a string with the error response body. This error is NOT returned in the response, but in the application logs, unless you enable `return_detailed_errors` in the `router` section. You can add escaped JSON, XML, etc in the string and add a Content-Type.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": "",
               "type": "string"
             },
             "content_type": {
               "title": "Content-Type",
-              "description": "The Content-Type header you'd like to send with the error response. When unset, uses `text/plain` by default.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "The Content-Type header you'd like to send with the error response. When unset, uses `text/plain` by default.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": "text/plain",
               "type": "string"
             },
             "status": {
               "title": "HTTP status code",
-              "description": "The HTTP status code you want to return when the validation fails.\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+              "description": "The HTTP status code you want to return when the validation fails.\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
               "default": 500,
               "type": "integer"
             }
@@ -130,7 +130,7 @@
         },
         "policies": {
           "title": "Policies",
-          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.io/docs/enterprise/security-policies/",
+          "description": "An array with all the policies to evaluate. Each policy is represented as a string\n\nSee: https://pucora.in/docs/enterprise/security-policies/",
           "type": "array",
           "items": {
             "title": "The policy you want to evaluate",

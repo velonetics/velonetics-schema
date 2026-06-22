@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/messaging/kafka/sasl.json",
+  "$id": "https://pucora.in/schema/v2.13/messaging/kafka/sasl.json",
   "title": "Kafka SASL",
   "description": "Enterprise only. SASL base authentication with broker: there are multiple SASL authentication methods but the current implementation is limited to plaintext (SASL/PLAIN) authentication",
   "type": "object",

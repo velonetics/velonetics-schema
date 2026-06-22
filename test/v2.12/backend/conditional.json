@@ -1,6 +1,6 @@
 {
   "description": "Conditional Routing test",
-  "target": "https://pucora.io/schema/v2.12/backend/conditional.json",
+  "target": "https://pucora.in/schema/v2.12/backend/conditional.json",
   "tests": [
     {
       "description": "Valid header strategy",

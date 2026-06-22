@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.6/telemetry/opentelemetry-backend.json",
+  "$id": "https://pucora.in/schema/v2.6/telemetry/opentelemetry-backend.json",
   "title": "OpenTelemetry Backend Override",
-  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
+  "description": "Enterprise only. Overrides metrics and traces declared by the OpenTelemetry service.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry-by-endpoint/",
   "type": "object",
   "properties": {
     "backend": {
       "title": "Report backend activity",
-      "description": "Reports the activity between Pucora and each of your backend services. This is the more granular layer.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+      "description": "Reports the activity between Pucora and each of your backend services. This is the more granular layer.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
       "type": "object",
       "properties": {
         "metrics": {
@@ -15,7 +15,7 @@
           "properties": {
             "disable_stage": {
               "title": "Disable this stage",
-              "description": "Whether to turn off the metrics or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether to turn off the metrics or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             }
@@ -30,7 +30,7 @@
           "properties": {
             "disable_stage": {
               "title": "Disable this stage",
-              "description": "Whether to turn off the traces or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry/",
+              "description": "Whether to turn off the traces or not. Setting this to `true` means stop reporting any data.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry/",
               "default": false,
               "type": "boolean"
             }
@@ -48,18 +48,18 @@
     },
     "proxy": {
       "title": "Report proxy activity",
-      "description": "Reports the activity at the beginning of the proxy layer, including spawning the required requests to multiple backends, merging, endpoint transformation and any other internals of the proxy between the request processing and the backend communication\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
+      "description": "Reports the activity at the beginning of the proxy layer, including spawning the required requests to multiple backends, merging, endpoint transformation and any other internals of the proxy between the request processing and the backend communication\n\nSee: https://pucora.in/docs/telemetry/opentelemetry-by-endpoint/",
       "type": "object",
       "properties": {
         "disable_metrics": {
           "title": "Disable metrics",
-          "description": "Whether you want to disable all metrics in this endpoint or not.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Whether you want to disable all metrics in this endpoint or not.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry-by-endpoint/",
           "default": false,
           "type": "boolean"
         },
         "disable_traces": {
           "title": "Disable traces",
-          "description": "Whether you want to disable all traces in this endpoint or not.\n\nSee: https://pucora.io/docs/telemetry/opentelemetry-by-endpoint/",
+          "description": "Whether you want to disable all traces in this endpoint or not.\n\nSee: https://pucora.in/docs/telemetry/opentelemetry-by-endpoint/",
           "default": false,
           "type": "boolean"
         }

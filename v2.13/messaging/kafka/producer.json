@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/messaging/kafka/producer.json",
+  "$id": "https://pucora.in/schema/v2.13/messaging/kafka/producer.json",
   "title": "Kafka Producer Details",
   "description": "Enterprise only. Defines details about how to write messages to a Kafka cluster",
   "type": "object",

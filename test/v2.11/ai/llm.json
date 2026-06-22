@@ -1,6 +1,6 @@
 {
   "description": "Conditional Routing test",
-  "target": "https://pucora.io/schema/v2.11/ai/llm.json",
+  "target": "https://pucora.in/schema/v2.11/ai/llm.json",
   "tests": [
     {
       "description": "Valid minimum configuration with one provider",

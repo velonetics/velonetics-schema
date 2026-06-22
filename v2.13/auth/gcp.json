@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/auth/gcp.json",
+  "$id": "https://pucora.in/schema/v2.13/auth/gcp.json",
   "title": "GCP Authentication",
-  "description": "Enterprise only. Enables GCP authentication between Pucora and Google Cloud service account.\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+  "description": "Enterprise only. Enables GCP authentication between Pucora and Google Cloud service account.\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
   "type": "object",
   "anyOf": [
     {
@@ -18,19 +18,19 @@
   "properties": {
     "audience": {
       "title": "Audience",
-      "description": "The audience in GCP looks like an URL, and contains the destination service you will ask a token for. Most of the times this URL will match exactly with the `host` entry.\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+      "description": "The audience in GCP looks like an URL, and contains the destination service you will ask a token for. Most of the times this URL will match exactly with the `host` entry.\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
       "examples": [ "https://gcptest-76fewi6rca-uc.a.run.app" ],
       "type": "string"
     },
     "credentials_file": {
       "title": "Path to credentials file",
-      "description": "The relative or absolute path to a credentials file in JSON format that contains all the credentials to authenticate API calls to the given service account.\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+      "description": "The relative or absolute path to a credentials file in JSON format that contains all the credentials to authenticate API calls to the given service account.\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
       "examples": [ "/etc/pucora/gcp.json" ],
       "type": "string"
     },
     "credentials_json": {
       "title": "JSON credentials file",
-      "description": "An inline JSON object containing all the credentials fields to authenticate to GCP.\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+      "description": "An inline JSON object containing all the credentials fields to authenticate to GCP.\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
       "examples": [
         {
           "type": "service_account",
@@ -49,12 +49,12 @@
     },
     "custom_claims": {
       "title": "Custom claims",
-      "description": "Custom private claims that you can optionally add to an ID token.\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+      "description": "Custom private claims that you can optionally add to an ID token.\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
       "type": "object"
     },
     "s2s_auth_header": {
       "title": "Service-to-service authentication header",
-      "description": "The header name to use in service-to-service authentication. This is useful to honor the original Authorization header in case it's needed by the backend (for example, CloudRun).\n\nSee: https://pucora.io/docs/enterprise/authentication/gcp/",
+      "description": "The header name to use in service-to-service authentication. This is useful to honor the original Authorization header in case it's needed by the backend (for example, CloudRun).\n\nSee: https://pucora.in/docs/enterprise/authentication/gcp/",
       "examples": [ "X-Serverless-Authorization" ],
       "default": "",
       "type": "string"

@@ -1,6 +1,6 @@
 {
   "description": "Grpc test",
-  "target": "https://pucora.io/schema/v2.13/backend/grpc.json",
+  "target": "https://pucora.in/schema/v2.13/backend/grpc.json",
   "tests": [
     {
       "description": "Valid unset max_call_recv_msg_size",

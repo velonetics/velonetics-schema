@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://pucora.io/schema/v2.10/redis.json",
+  "$id": "https://pucora.in/schema/v2.10/redis.json",
   "title": "Redis configuration",
   "description": "Defines the Redis connection pools available to any functionality requiring Redis.\n\nSee: /docs/enterprise/throttling/global-rate-limit/",
   "type": "object",
@@ -160,7 +160,7 @@
           },
           "tls": {
             "title": "tls",
-            "description": "An object with any [client TLS configuration](https://pucora.io/docs/enterprise/service-settings/tls/#client-tls-settings) to this connection",
+            "description": "An object with any [client TLS configuration](https://pucora.in/docs/enterprise/service-settings/tls/#client-tls-settings) to this connection",
             "$ref": "./client_tls.json",
             "type": "object"
           },
@@ -321,7 +321,7 @@
           },
           "tls": {
             "title": "tls",
-            "description": "An object with any [client TLS configuration](https://pucora.io/docs/enterprise/service-settings/tls/#client-tls-settings) to this connection",
+            "description": "An object with any [client TLS configuration](https://pucora.in/docs/enterprise/service-settings/tls/#client-tls-settings) to this connection",
             "$ref": "./client_tls.json",
             "type": "object"
           },

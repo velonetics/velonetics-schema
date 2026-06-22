@@ -1,6 +1,6 @@
 {
     "description": "Service Redis Rate limit",
-    "target": "https://pucora.io/schema/v2.11/qos/ratelimit/redis.json",
+    "target": "https://pucora.in/schema/v2.11/qos/ratelimit/redis.json",
     "tests": [
         {
             "description": "the empty object is invalid",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://pucora.io/schema/v2.13/backend/pubsub/kafka/subscriber.json",
+  "$id": "https://pucora.in/schema/v2.13/backend/pubsub/kafka/subscriber.json",
   "title": "PubSub Kafka Subscriber EE",
   "description": "Enterprise only. Allows for fine grained control over a kafka subcription connection",
   "type": "object",

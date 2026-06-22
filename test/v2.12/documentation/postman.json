@@ -1,6 +1,6 @@
 {
   "description": "Postman test",
-  "target": "https://pucora.io/schema/v2.12/documentation/postman.json",
+  "target": "https://pucora.in/schema/v2.12/documentation/postman.json",
   "tests": [
     {
       "description": "Valid Postman collection at the service level",

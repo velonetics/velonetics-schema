@@ -1,8 +1,8 @@
 ## Schema validation for Pucora configuration files
-This repository contains the source code used to publish Pucora's configuration schema. The official Pucora schema lives under `https://pucora.io/schema/pucora.json` for the **latest** version, and `https://pucora.io/schema/vX.x/pucora.json` for a specific version (replace `vX.x` by the version, e.g., `v2.3`)
+This repository contains the source code used to publish Pucora's configuration schema. The official Pucora schema lives under `https://pucora.in/schema/pucora.json` for the **latest** version, and `https://pucora.in/schema/vX.x/pucora.json` for a specific version (replace `vX.x` by the version, e.g., `v2.3`)
 
 
-If you are looking to validate your endpoints' JSON schema, see [JSON-schema validation](https://pucora.io/docs/endpoints/json-schema/).
+If you are looking to validate your endpoints' JSON schema, see [JSON-schema validation](https://pucora.in/docs/endpoints/json-schema/).
 
 **You must use Pucora v2.0 and higher.**
 
@@ -19,7 +19,7 @@ In most modern editors, **there is nothing you need to install** as they have bu
 To use this schema add the `$schema` attribute in your configuration files. There is no need to clone this repo unless you'd like to submit a pull request:
 
     {
-        "$schema": "https://pucora.io/schema/v2.3/pucora.json",
+        "$schema": "https://pucora.in/schema/v2.3/pucora.json",
         "version": 3,
         "endpoints": [
             ...
@@ -28,10 +28,10 @@ To use this schema add the `$schema` attribute in your configuration files. Ther
 
 Replace the `v2.3` in the URL by the Pucora version you are using.
 
-![IDE Integration](https://pucora.io/images/documentation/pucora-ide-integration.png)
+![IDE Integration](https://pucora.in/images/documentation/pucora-ide-integration.png)
 
 You can also use sub-schemas if needed. The `pucora.json` file is the main schema that references other sub-schemas with the `$ref` attribute.
 
-For more information visit [IDE integration](https://pucora.io/docs/enterprise/developer/ide-integration/)
+For more information visit [IDE integration](https://pucora.in/docs/enterprise/developer/ide-integration/)
 
 If you find any inconsistency in the schema, please **open an issue or pull request**.

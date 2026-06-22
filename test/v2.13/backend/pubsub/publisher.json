@@ -1,6 +1,6 @@
 {
   "description": "Pub/Sub publisher backend schema test",
-  "target": "https://pucora.io/schema/v2.13/backend/pubsub/publisher.json",
+  "target": "https://pucora.in/schema/v2.13/backend/pubsub/publisher.json",
   "tests": [
     {
       "description": "Kafka publisher topic_url",
